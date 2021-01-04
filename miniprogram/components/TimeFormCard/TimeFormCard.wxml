@@ -1,0 +1,15 @@
+<!--components/TimeFormCard.wxml-->
+<view class="container">
+    <view class="left">
+        <text class="form-name">{{form.formName}}</text>
+        <view class="status">
+            <text style="color: #33C2FC; margin-right: 10rpx;">●</text>
+            <text style="color: #888;">{{form.formStatus}}</text>
+        </view>
+    </view>
+    <view class="middle-line"></view>
+    <view class="right">
+        <text class="count">{{form.peopleCount}}</text>
+        <text style="font-size: 25rpx; color: #888; ">统计人数</text>
+    </view>
+</view>
