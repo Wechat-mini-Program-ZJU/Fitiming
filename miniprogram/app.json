@@ -27,11 +27,6 @@
         "pagePath": "pages/More/More",
         
         "text": "More"
-      },
-      {
-        "pagePath": "pages/NewTiming/NewTiming",
-        
-        "text": "New Timing"
       }
     ]
   },

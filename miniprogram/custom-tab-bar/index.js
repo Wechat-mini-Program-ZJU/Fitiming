@@ -16,11 +16,11 @@ Component({
       //tabBar页面数据
       tabList: [
         {
-          "pagePath": "../pages/MyTiming/MyTiming",       
+          "pagePath": "pages/MyTiming/MyTiming",       
           "text": "My Timing"
         },
         {
-          "pagePath": "../pages/More/More",
+          "pagePath": "pages/More/More",
           "text": "More"
         },
 

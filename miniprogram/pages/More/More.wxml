@@ -1,2 +1,7 @@
 <!--miniprogram/pages/More/More.wxml-->
+<view>
+  <cu-custom bgColor="bg-white" >
+	  <view slot="content">More</view>
+  </cu-custom>
+</view>
 <text>miniprogram/pages/More/More.wxml</text>

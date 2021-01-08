@@ -1,11 +1,12 @@
 <!--miniprogram/pages/MyTiming/MyTiming.wxml-->
-<text>miniprogram/pages/MyTiming/MyTiming.wxml</text>
+
 
 <view>
   <cu-custom bgColor="bg-white" >
 	  <view slot="content">My Timing</view>
   </cu-custom>
 </view>
+<text>miniprogram/pages/MyTiming/MyTiming.wxml</text>
 <TimeFormCard form="{{form}}"></TimeFormCard>
 
 
