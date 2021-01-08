@@ -1,18 +1,21 @@
 <!--custom-tab-bar/index.wxml-->
 <!-- <text>custom-tab-bar/index.wxml</text> -->
 <view class="cu-bar tabbar margin-bottom-xl bg-white">
-    <view class="action text-green">
-      <view class="cuIcon-time"></view> My Timing
+    <view class="action {{selected === 0 ? 'active' : 'default'}}" data-index="0" bindtap="switchTab">
+      <view class="cuIcon-time"></view> 
+      My Timing
     </view>
     
     <view class="action text-gray add-action">
       <button class="cu-btn cuIcon-add bg-green shadow"></button>
-      
+      New Timing
+      <!-- 暂时标注文字 -->
     </view>
     
-    <view class="action text-gray">
+    <view class="action {{selected === 1 ? 'active' : 'default'}}" data-index="1" bindtap="switchTab">
       <view class="cuIcon-more">
-        <view class="cu-tag badge"></view>
+        <!-- <view class="cu-tag badge"></view> -->
+        <!-- 上面是一个小红点 -->
       </view>
       More
     </view>

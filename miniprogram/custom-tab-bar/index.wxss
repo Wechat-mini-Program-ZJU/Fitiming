@@ -2,3 +2,11 @@
 /**app.wxss**/
 @import "../colorui/main.wxss";
 @import "../colorui/icon.wxss";
+
+.active{
+  /* color: #ffe082; */
+  color: #000;
+}
+.default{
+  color: #e5e5e5;
+}
