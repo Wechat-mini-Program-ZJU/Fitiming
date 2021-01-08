@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/MyTiming/MyTiming",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/MyTiming/MyTiming",
+    
     "pages/More/More",
     "pages/NewTiming/NewTiming",
     "pages/Analysis/Analysis",

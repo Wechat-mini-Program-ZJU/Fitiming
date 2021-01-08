@@ -5,6 +5,11 @@ Page({
      * 页面的初始数据
      */
     data: {
+        form: {
+            formName: "大内建时间意向调查",
+            formStatus: "已发布",
+            peopleCount: 29,
+          }
 
     },
 

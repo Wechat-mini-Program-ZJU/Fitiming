@@ -1,2 +1,7 @@
 <!--miniprogram/pages/MyTiming/MyTiming.wxml-->
 <text>miniprogram/pages/MyTiming/MyTiming.wxml</text>
+<view>
+  <TimeFormCard form="{{form}}"></TimeFormCard>
+
+</view>
+
