@@ -3,10 +3,14 @@
 @import "../colorui/main.wxss";
 @import "../colorui/icon.wxss";
 
+.tabbar{
+  background-color: white;
+}
 .active{
   /* color: #ffe082; */
-  color: #000;
+  color: #2ec6f7;
 }
 .default{
-  color: #e5e5e5;
+  color: #757575;
 }
+/* 在找到合适的icon进行替换之前，配色暂时只能这样先 */

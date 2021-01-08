@@ -2,6 +2,9 @@
 @import "colorui/main.wxss";
 @import "colorui/icon.wxss";
 
+page{
+  background: linear-gradient( white,  #cde5ec, white);
+}
 
 .container {
   height: 100%;
