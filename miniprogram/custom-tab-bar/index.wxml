@@ -1,0 +1,19 @@
+<!--custom-tab-bar/index.wxml-->
+<!-- <text>custom-tab-bar/index.wxml</text> -->
+<view class="cu-bar tabbar margin-bottom-xl bg-white">
+    <view class="action text-green">
+      <view class="cuIcon-time"></view> My Timing
+    </view>
+    
+    <view class="action text-gray add-action">
+      <button class="cu-btn cuIcon-add bg-green shadow"></button>
+      
+    </view>
+    
+    <view class="action text-gray">
+      <view class="cuIcon-more">
+        <view class="cu-tag badge"></view>
+      </view>
+      More
+    </view>
+  </view>

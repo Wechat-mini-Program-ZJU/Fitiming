@@ -2,12 +2,11 @@
 
 ## 版本修订
 
-| 版本号 | 修订人 | 修订时间 | 修订内容                                     |
-| ------ | ------ | -------- | -------------------------------------------- |
-| v1.0.0 | 徐瑞柏 | 20.12.25 | 大致的结构框架和简介，以及各模块概况及规划。 |
-| v1.0.1 | 颜尔汛 | 20.1.5   | TimeFormCard组件初版                         |
-
-
+| 版本号 | 修订人 | 修订时间 | 修订内容                                                     |
+| ------ | ------ | -------- | ------------------------------------------------------------ |
+| v1.0.0 | 徐瑞柏 | 20.12.25 | 大致的结构框架和简介，以及各模块概况及规划。                 |
+| v1.0.1 | 颜尔汛 | 20.1.5   | TimeFormCard组件初版                                         |
+| v1.0.2 | 徐瑞柏 | 20.1.9   | 新增组件及页面<br/>新增colorUI<br/>新增基于colorUI的自定义Tabbar |
 
 ## 简介
 
@@ -27,21 +26,35 @@ Fitiming1.0.0计划以Qscamera为参照对象，分前端/后端云函数/后端
 
 
 
+### Color UI
+
+ColorUI是一个css库，在这个项目中，我们借助 Color UI-使用原生小程序开发 加快前端开发
+
+参考：[Color UI Github](https://github.com/weilanwl/ColorUI)
+
+
+
 ### 组件(待完善)
 
-1. TimeFormCard
+1. 自定义Tabbar
+
+   基于colorUI
+
+   大致流程可参照 [微信小程序ColorUI自定义底部导航条Tabbar](https://mp.weixin.qq.com/s/rny7nKdARJWJ0U6clOiwsA)
+
+2. TimeFormCard
 
    时间统计信息卡片组件
 
    <img src=".\pictures\TimeFormCard.jpg" alt="image-20201225125643648" style="zoom:33%;" />
 
-2. TimeFormQuest
+3. TimeFormQuest
 
    时间统计处理请求组件
 
    <img src=".\pictures\TimeFormQuest.jpg" alt="image-20201225125643648" style="zoom:33%;" />
 
-3. TimeBar
+4. TimeBar
 
    时间轴组件
 
@@ -51,7 +64,7 @@ Fitiming1.0.0计划以Qscamera为参照对象，分前端/后端云函数/后端
 
    <img src=".\pictures\TimeBar.jpg" alt="TimeBar" style="zoom:33%;" />
 
-4. TimePoint
+5. TimePoint
 
    时间点组件
 
@@ -61,7 +74,7 @@ Fitiming1.0.0计划以Qscamera为参照对象，分前端/后端云函数/后端
 
    <img src=".\pictures\TimePoint.jpg" alt="TimePoint" style="zoom:33%;" />
 
-5. AnalysisForm
+6. AnalysisForm
 
    分析表单组件
 
