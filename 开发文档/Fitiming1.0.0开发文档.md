@@ -33,15 +33,41 @@ Fitiming1.0.0计划以Qscamera为参照对象，分前端/后端云函数/后端
 
    时间统计信息卡片组件
 
-   ![image-20201225125643648](.\pictures\TimeFormCard.jpg)
+   <img src=".\pictures\TimeFormCard.jpg" alt="image-20201225125643648" style="zoom:33%;" />
 
 2. TimeFormQuest
 
    时间统计处理请求组件
 
-   ![image-20201225125643648](.\pictures\TimeFormQuest.jpg)
+   <img src=".\pictures\TimeFormQuest.jpg" alt="image-20201225125643648" style="zoom:33%;" />
 
-3. 
+3. TimeBar
+
+   时间轴组件
+
+   1个时间轴组件由1个日期，24个小时时间段icon颗粒组成（最后选中时间段颗粒的逻辑类似音乐收藏）
+
+   后续可在Analysis时间统计分析页和分享出去的表单页中调用
+
+   <img src=".\pictures\TimeBar.jpg" alt="TimeBar" style="zoom:33%;" />
+
+4. TimePoint
+
+   时间点组件
+
+   1个时间点组件由25个时间点（0:00到24:00）标识组成
+
+   后续同样可在Analysis时间统计分析页和分享出去的表单页中调用
+
+   <img src=".\pictures\TimePoint.jpg" alt="TimePoint" style="zoom:33%;" />
+
+5. AnalysisForm
+
+   分析表单组件
+
+   1个分析表单组件由1个统计标题、1个当前选中时间颗粒、若干当前选中时间颗粒有空（由用户自己事先选定）的不同用户的头像和账号昵称 组成
+
+   <img src=".\pictures\AnalysisForm.jpg" alt="AnalysisForm" style="zoom:33%;" />
 
  
 
@@ -51,11 +77,39 @@ Fitiming1.0.0计划以Qscamera为参照对象，分前端/后端云函数/后端
 
    我的时间统计页
 
+   点击导航栏icon（左）进入
+
    
 
 2. More
 
    更多页
+   
+   点击导航栏icon（右）进入
+
+
+
+3. MyCenter
+
+   个人中心页
+
+   由更多页进入
+
+
+
+4. NewTiming
+
+   新建时间统计页
+
+   点击导航栏icon（中）进入
+
+
+
+5. Analysis页
+
+   时间统计分析页
+
+   由 组件：时间统计处理请求-统计分析 选项 进入
 
 
 
