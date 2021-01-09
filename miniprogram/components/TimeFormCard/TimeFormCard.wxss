@@ -11,10 +11,19 @@
     justify-content: space-between;
 }
 
-.circle{
-    color: #33C2FC; 
+.circle_posted{
     margin-right: 10rpx;
+    color: #2ec6f7;
 }
+.circle_unposted{
+    margin-right: 10rpx;
+    color: #e5e5e5;
+}
+.circle_inactive{
+    margin-right: 10rpx;
+    color: #ffe082;  
+}
+
 
 .left-part {
     display: flex;
