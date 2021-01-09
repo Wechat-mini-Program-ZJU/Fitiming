@@ -1,4 +1,8 @@
+const { formlist } = require("../../data/formList");
 // miniprogram/pages/MyTiming/MyTiming.js
+
+var formList = require("../../data/formList");
+
 Page({
 
     /**
@@ -6,9 +10,9 @@ Page({
      */
     data: {
         form: {
-            formName: "大内建时间意向调查",
-            formStatus: "已发布",
-            peopleCount: 29,
+            // formName: "大内建时间意向调查",
+            // formStatus: "已发布",
+            // peopleCount: 29,
           }
 
     },
@@ -17,7 +21,11 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      this.setData({
+        form: formList.formlist
+      })
+      console.log(formList)
+      console.log(this.data.form)
     },
 
     /**

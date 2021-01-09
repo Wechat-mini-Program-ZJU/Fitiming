@@ -11,6 +11,11 @@
     justify-content: space-between;
 }
 
+.circle{
+    color: #33C2FC; 
+    margin-right: 10rpx;
+}
+
 .left-part {
     display: flex;
     flex-direction: column;

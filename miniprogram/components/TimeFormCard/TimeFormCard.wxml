@@ -3,8 +3,10 @@
     <view class="left-part">
         <text class="form-name">{{form.formName}}</text>
         <view class="status">
-            <text style="color: #33C2FC; margin-right: 10rpx;">●</text>
+            <!-- <text style="color: {{form.formStatus =="已发布" ? #33C2FC:#fff}}; margin-right: 10rpx;">●</text> -->
+            <text class="circle">●</text>
             <text style="color: #888;">{{form.formStatus}}</text>
+            
         </view>
     </view>
     
