@@ -14,7 +14,7 @@ Page({
 
     },
     showQuest: function(e){
-      console.log("showQuestFlag", this.showQuestFlag)
+      // console.log("showQuestFlag", this.showQuestFlag)
       this.setData({
         showQuestFlag: 1
       })
@@ -22,7 +22,7 @@ Page({
     handleCard: function(e){
       // console.log("formList", formList)
       console.log("e.currentTarget.dataset.target", e.currentTarget.dataset.target)
-      console.log("e.currentTarget.dataset.target.quest", e.currentTarget.dataset.target.quest)
+      // console.log("e.currentTarget.dataset.target.quest", e.currentTarget.dataset.target.quest)
       //console.log("form before:",form)
       this.setData({
         
