@@ -3,10 +3,10 @@
 
 <view>
   <cu-custom bgColor="bg-white" >
-	  <view slot="content">My Timing</view>
+	  <view slot="content">我的时间统计</view>
   </cu-custom>
 </view>
-<text>miniprogram/pages/MyTiming/MyTiming.wxml</text>
+<!-- <text>miniprogram/pages/MyTiming/MyTiming.wxml</text> -->
 <TimeFormCard form="{{form}}"></TimeFormCard>
 
 
