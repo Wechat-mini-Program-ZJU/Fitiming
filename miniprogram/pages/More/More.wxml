@@ -5,4 +5,16 @@
   </cu-custom>
 </view>
 
-<text>miniprogram/pages/More/More.wxml</text>
+<!-- <text>miniprogram/pages/More/More.wxml</text> -->
+<view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击获取头像昵称 </button>
+    <block wx:else>
+    <view class="userinfo-header">
+        <image class="userinfo-header-bg" src="{{userInfo.avatarUrl}}"></image>
+        <view class="userinfo-colorfor">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" ></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </view>
+      </view>
+    </block>
+</view>
