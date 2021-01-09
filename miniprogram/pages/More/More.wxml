@@ -4,4 +4,5 @@
 	  <view slot="content">更多</view>
   </cu-custom>
 </view>
+
 <text>miniprogram/pages/More/More.wxml</text>

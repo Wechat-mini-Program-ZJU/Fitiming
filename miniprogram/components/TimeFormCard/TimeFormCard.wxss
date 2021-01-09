@@ -2,14 +2,16 @@
 .container {
     display: flex;
     flex-direction: row;
-    padding: 30rpx;
-    background-color: white;
-    border-radius: 10rpx;
-    height: 200rpx;
     align-items: center;
+    padding: 50rpx;
+    background-color: white;
+    margin: 20rpx;
+    border-radius: 10px;
+    height: 200rpx;
+    justify-content: space-between;
 }
 
-.left {
+.left-part {
     display: flex;
     flex-direction: column;
 }
@@ -31,12 +33,18 @@
 .middle-line {
     background: #DDD;
     width: 1.5px;
-    height: 120rpx;
-    margin-left: 20rpx;
+    height: 140rpx;
+    /* margin-left: 20rpx; */
     margin-right: 40rpx;
 }
 
-.right {
+.right-part {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.num {
     display: flex;
     flex-direction: column;
     align-items: center;

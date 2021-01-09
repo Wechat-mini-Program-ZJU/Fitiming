@@ -7,6 +7,7 @@
   </cu-custom>
 </view>
 <!-- <text>miniprogram/pages/MyTiming/MyTiming.wxml</text> -->
+<view style="padding-bottom: 40rpx"></view>
 <TimeFormCard form="{{form}}"></TimeFormCard>
 
 
