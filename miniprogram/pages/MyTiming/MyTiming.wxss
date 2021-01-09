@@ -1,1 +1,12 @@
 /* miniprogram/pages/MyTiming/MyTiming.wxss */
+.cross-line {
+  background: #DDD;
+  width: 680rpx;
+  height: 3rpx;
+  /* margin-left: 20rpx; */
+  margin-right: 40rpx;
+}
+
+.option{
+  padding: 20rpx;
+}
