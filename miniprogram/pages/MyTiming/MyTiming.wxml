@@ -1,2 +1,45 @@
 <!--miniprogram/pages/MyTiming/MyTiming.wxml-->
-<text>miniprogram/pages/MyTiming/MyTiming.wxml</text>
+
+
+<view>
+  <cu-custom bgColor="bg-white" >
+	  <view slot="content">我的时间统计</view>
+  </cu-custom>
+</view>
+<!-- <text>miniprogram/pages/MyTiming/MyTiming.wxml</text> -->
+<view style="padding-bottom: 40rpx"></view>
+
+<view wx:for="{{form}}" wx:key="index" wx:for-index="index">
+  <TimeFormCard bindtap="handleCard" data-target="{{item}}" form="{{item}}"></TimeFormCard>
+  
+</view>
+
+<view wx:if="{{showQuestFlag}}" class="cu-modal bottom-modal show"><!-- 这里class里必须设置show 原本用它控制底部窗口显示 -->
+  <view class="cu-dialog">
+    <view>
+      <view class="action text-blue option" hidden="{{formStatus == '已发布' ? false : true}}" bindtap="stopForm">停止统计</view>
+      <view class="action text-blue option" hidden="{{formStatus == '未发布' ? false : true}}" bindtap="postForm">发布统计</view>
+      <view class="action text-blue option" hidden="{{formStatus == '已停止' ? false : true}}" bindtap="startForm">开始统计</view>
+    </view>
+    <view class="cross-line"></view>
+    <view class="action text-blue option" bindtap="analyseForm">统计分析</view>
+    <view class="cross-line"></view>
+    <view class="action text-blue option" bindtap="editForm">编辑</view>
+    <view class="cross-line"></view>
+    <view class="action text-blue option" bindtap="shareForm">分享</view>
+    <view class="cross-line"></view>
+    <view class="action text-blue option" bindtap="previewForm">预览</view>
+    <view class="cross-line"></view>
+    <view class="action text-blue option" bindtap="deleteForm">删除</view>
+    <view class="cross-line"></view>
+    <view class="action text-blue option" bindtap="hideModal">取消</view>
+    
+    
+  </view>
+</view>
+
+
+
+
+
+

@@ -1,15 +1,24 @@
 <!--components/TimeFormCard.wxml-->
+<!-- <view class="container" bindtap="handleCard"> -->
 <view class="container">
-    <view class="left">
+    <view class="left-part">
         <text class="form-name">{{form.formName}}</text>
         <view class="status">
-            <text style="color: #33C2FC; margin-right: 10rpx;">●</text>
+            <!-- <text style="color: {{form.formStatus =="已发布" ? #33C2FC:#fff}}; margin-right: 10rpx;">●</text> -->
+            <text hidden="{{form.formStatus == '已发布' ? false : true}}" class="circle_posted">●</text>
+            <text hidden="{{form.formStatus == '未发布' ? false : true}}" class="circle_unposted">●</text>
+            <text hidden="{{form.formStatus == '已停止' ? false : true}}" class="circle_inactive">●</text>
             <text style="color: #888;">{{form.formStatus}}</text>
+            
         </view>
     </view>
-    <view class="middle-line"></view>
-    <view class="right">
-        <text class="count">{{form.peopleCount}}</text>
-        <text style="font-size: 25rpx; color: #888; ">统计人数</text>
+    
+    <view class="right-part">
+        
+        <view class="num">
+            <text class="count">{{form.peopleCount}}</text>
+            <text style="font-size: 25rpx; color: #888; ">统计人数</text>
+        </view>
+        <view class="middle-line"></view>
     </view>
 </view>

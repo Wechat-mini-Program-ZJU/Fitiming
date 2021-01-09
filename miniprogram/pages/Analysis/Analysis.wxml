@@ -1,0 +1,7 @@
+<!--miniprogram/pages/Analysis.wxml-->
+<cu-custom bgColor="bg-white " isBack="{{true}}">
+  <view slot="backText"></view>
+  <view slot="content">统计分析</view>
+</cu-custom>
+
+<text>miniprogram/pages/Analysis.wxml</text>
