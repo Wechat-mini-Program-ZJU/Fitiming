@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "TimeFormCard": "../../components/TimeFormCard/TimeFormCard"
+    "TimeFormCard": "../../components/TimeFormCard/TimeFormCard",
+    "TimeFormQuest": "../../components/TimeFormQuest/TimeFormQuest"
   },
   "component": true
 }

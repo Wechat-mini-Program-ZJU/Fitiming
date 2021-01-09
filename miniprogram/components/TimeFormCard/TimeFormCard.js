@@ -37,6 +37,6 @@ Component({
     },
 
     ready: function(){
-        console.log(this.form)
+        // console.log(this.form)
     }
 })

@@ -2,7 +2,7 @@
 <!-- <text>custom-tab-bar/index.wxml</text> -->
 <view class="cu-bar tabbar">
     <view class="action {{selected === 0 ? 'active' : 'default'}}" data-index="0" bindtap="switchTab">
-      <view class="cuIcon-time"></view> 
+      <view class="cuIcon-timefill"></view> 
       My Timing
     </view>
     
@@ -13,7 +13,7 @@
       </view>
 
     <view class="action {{selected === 1 ? 'active' : 'default'}}" data-index="1" bindtap="switchTab">
-      <view class="cuIcon-more">
+      <view class="cuIcon-profilefill">
         <!-- <view class="cu-tag badge"></view> -->
         <!-- 上面是一个小红点 -->
       </view>

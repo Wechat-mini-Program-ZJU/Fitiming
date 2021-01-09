@@ -10,9 +10,28 @@
 <view style="padding-bottom: 40rpx"></view>
 
 <view wx:for="{{form}}" wx:key="index" wx:for-index="index">
-  <TimeFormCard form="{{item}}"></TimeFormCard>
+  <TimeFormCard bindtap="handleCard" data-target="{{item}}" form="{{item}}"></TimeFormCard>
+  <TimeFormQuest wx:if="{{item.quest}}" form="{{formItem}}"></TimeFormQuest>
 </view>
 
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 底部窗口
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="bottomModal">Bottom</button>
+  </view>
+</view>
+<view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}">
+  <view class="cu-dialog">
+    
+      <!-- <view class="action text-green">确定</view> -->
+      <view class="action text-green"></view>
+      <view class="action text-blue" bindtap="hideModal">取消</view>
+    
+    
+  </view>
+</view>
 
 
 

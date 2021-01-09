@@ -8,7 +8,7 @@
 }
 .active{
   /* color: #ffe082; */
-  color: #2ec6f7;
+  color: #ffe082;
 }
 .default{
   color: #757575;

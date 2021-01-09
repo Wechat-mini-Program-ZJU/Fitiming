@@ -1,5 +1,6 @@
 <!--components/TimeFormCard.wxml-->
-<view class="container" bindtap="handleCard">
+<!-- <view class="container" bindtap="handleCard"> -->
+<view class="container">
     <view class="left-part">
         <text class="form-name">{{form.formName}}</text>
         <view class="status">
