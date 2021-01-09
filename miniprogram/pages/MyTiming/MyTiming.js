@@ -37,15 +37,20 @@ Page({
       this.showQuest()
       //console.log("formItem after:",formItem)
     },
-    showModal(e) {
-      this.setData({
-        modalName: e.currentTarget.dataset.target
-      })
-    },
+    // showModal(e) {
+    //   this.setData({
+    //     modalName: e.currentTarget.dataset.target
+    //   })
+    // },
     hideModal(e) {
       this.setData({
-        modalName: null,
+        // modalName: null,
         showQuestFlag: 0
+      })
+    },
+    analyseForm: function(e){
+      wx.navigateTo({
+        url: `../Analysis/Analysis?formName=${this.data.form.formName}`,
       })
     },
 
@@ -85,7 +90,10 @@ Page({
      * 生命周期函数--监听页面隐藏
      */
     onHide: function () {
-
+      this.setData({
+        // modalName: null,
+        showQuestFlag: 0
+      })
     },
 
     /**
