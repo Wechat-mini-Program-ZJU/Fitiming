@@ -3,10 +3,11 @@
 @import "colorui/icon.wxss";
 
 page{
-  background: linear-gradient( white,  #cde5ec, white);
+  background: linear-gradient( #cde5ec,  #cde5ec, #cde5ec);
+  
 }
 
-.container {
+/* .container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -14,4 +15,4 @@ page{
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}  */

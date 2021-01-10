@@ -1,6 +1,7 @@
 /* components/TimeBar/TimeBar.wxss */
 
 .particle{
-  width: 150rpx;
-  height: 50rpx;
+  width: 140rpx;
+  height: 70rpx;
+  border-radius: 10px;
 }

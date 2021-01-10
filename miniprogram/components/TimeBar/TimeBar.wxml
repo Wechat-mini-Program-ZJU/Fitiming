@@ -3,6 +3,6 @@
 
 <view wx:for="{{particle}}">
   <!-- <view> 666 </view> -->
-  <view> {{item.idx}} </view>
-  <image class="particle" catchtap="handleParticle" src="{{'../../images/time_particle_white_white.svg'}}"> </image>
+  <!-- <view> {{item.idx}} </view> -->
+  <image class="particle" catchtap="handleParticle" src="{{'../../images/RoundedRect_lightblue_white.svg'}}"> </image>
 </view>
