@@ -1,0 +1,22 @@
+/* components/InputBox/InputBox.wxss */
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 30rpx;
+    padding: 30rpx;
+    border-radius: 20rpx;
+    box-shadow: 0 0 0 1rpx rgba(200, 200, 200, 0.1);
+    font-size: 1.2em;
+}
+
+.prompt {
+    width: 200rpx;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+.content {
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+}

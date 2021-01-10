@@ -1,0 +1,7 @@
+<!--components/InputBox/InputBox.wxml-->
+<view class="container">
+    <view class="prompt">{{prompt}}</view>
+    <view class="content">
+        <input placeholder="{{placeholder}}" />
+    </view>
+</view>

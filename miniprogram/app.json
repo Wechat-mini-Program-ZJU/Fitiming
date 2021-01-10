@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/MyTiming/MyTiming",
     "pages/index/index",
     "pages/logs/logs",
@@ -25,7 +26,6 @@
       },
       {
         "pagePath": "pages/More/More",
-        
         "text": "More"
       }
     ]
