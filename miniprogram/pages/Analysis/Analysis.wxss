@@ -1,1 +1,13 @@
 /* miniprogram/pages/Analysis.wxss */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center;
+  padding: 50rpx;
+  background-color: white;
+  margin: 20rpx;
+  border-radius: 10px;
+  height: 200rpx; */
+  justify-content: space-between;
+}
