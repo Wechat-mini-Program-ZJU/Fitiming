@@ -3,8 +3,6 @@ page{
   /* background-color: #cde5ec; */
   background-color: #cde5ec;
 }
-
-
 .container {
   display: flex;
   flex-direction: row;

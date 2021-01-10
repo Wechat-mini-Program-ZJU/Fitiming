@@ -4,7 +4,7 @@
 .AnalysisForm {
   background-color: white;
   border-radius: 10px;
-  height: 1000rpx;
+  height: 1150rpx;
   width: 446rpx;
 }
 .title{
@@ -15,4 +15,24 @@
   padding:10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.asrow{
+  /* justify-content: space-between;
+  width: min-content; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 31rpx;
+  justify-content: center;
+}
+.ascolumn{
+  display: flex;
+  flex-direction: column;
+  margin:10rpx;
+}
+.mid{
+  display: flex;
+  justify-content: center;
+}
+.margin{
+  margin:10rpx;
+}
