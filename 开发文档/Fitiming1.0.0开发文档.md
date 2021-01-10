@@ -7,6 +7,7 @@
 | v1.0.0 | 徐瑞柏 | 20.12.25 | 大致的结构框架和简介，以及各模块概况及规划。                 |
 | v1.0.1 | 颜尔汛 | 20.1.5   | TimeFormCard组件初版                                         |
 | v1.0.2 | 徐瑞柏 | 20.1.9   | 新增组件及页面<br/>新增colorUI<br/>新增基于colorUI的自定义Tabbar |
+| v1.0.3 | 徐瑞柏 | 20.1.10  | 删除TimeFormQuest组件<br/>更新有关My Timing页面的描述<br/>细化其他一些页面的描述 |
 
 ## 简介
 
@@ -48,12 +49,6 @@ ColorUI是一个css库，在这个项目中，我们借助 Color UI-使用原生
 
    <img src=".\pictures\TimeFormCard.jpg" alt="image-20201225125643648" style="zoom:33%;" />
 
-3. TimeFormQuest
-
-   时间统计处理请求组件
-
-   <img src=".\pictures\TimeFormQuest.jpg" alt="image-20201225125643648" style="zoom:33%;" />
-
 4. TimeBar
 
    时间轴组件
@@ -92,6 +87,10 @@ ColorUI是一个css库，在这个项目中，我们借助 Color UI-使用原生
 
    点击导航栏icon（左）进入
 
+   调用组件：TimeFormCard；
+
+   下端有底部窗口，点击页面内调用的TimeFormCard组件可触发
+
    
 
 2. More
@@ -122,6 +121,8 @@ ColorUI是一个css库，在这个项目中，我们借助 Color UI-使用原生
 
    时间统计分析页
 
+   调用组件：TimePoint；TimeBar；AnalysisForm
+   
    由 组件：时间统计处理请求-统计分析 选项 进入
 
 
