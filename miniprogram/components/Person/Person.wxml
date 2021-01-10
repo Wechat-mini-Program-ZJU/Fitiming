@@ -1,0 +1,6 @@
+<!--components/Person/Person.wxml-->
+<view class="padding-sm">
+  <view class="cu-avatar round lg bg-{{item.name}} margin-xs" wx:for="{{ColorList}}" wx:key>
+    <text class="avatar-text">{{item.name}}</text>
+  </view>
+</view>

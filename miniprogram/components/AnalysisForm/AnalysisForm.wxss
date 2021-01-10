@@ -1,1 +1,18 @@
 /* components/AnalysisForm/AnalysisForm.wxss */
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+.AnalysisForm {
+  background-color: white;
+  border-radius: 10px;
+  height: 1000rpx;
+  width: 446rpx;
+}
+.title{
+  text-align: center;
+  width:100%; 
+  height:27px;
+  font-size: medium;
+  padding:10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
