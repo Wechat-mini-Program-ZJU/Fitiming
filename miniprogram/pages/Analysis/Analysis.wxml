@@ -4,8 +4,6 @@
   <view slot="content">统计分析</view>
 </cu-custom>
 
-<text>miniprogram/pages/Analysis.wxml</text>
-
 <view class="container">
   <TimePoint></TimePoint>
   <TimeBar></TimeBar>
