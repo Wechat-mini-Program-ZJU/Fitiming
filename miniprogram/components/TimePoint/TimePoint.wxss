@@ -1,1 +1,10 @@
 /* components/TimePoint/TimePoint.wxss */
+
+.TimePoint{
+  /* width: 140rpx;
+  height: 90rpx;
+  border-radius: 10rpx;
+  padding-top: 20rpx; */
+  font-size: 25rpx;
+  padding-bottom: 68rpx;
+}

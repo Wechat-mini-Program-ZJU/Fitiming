@@ -1,2 +1,10 @@
 <!--components/TimePoint/TimePoint.wxml-->
-<text>c</text>
+
+<view wx:for="{{point}}">
+  <!-- <view> 666 </view> -->
+  <!-- <view> {{item.idx}} </view> -->
+  <view class="TimePoint">
+    <text catchtap="handlePoint"> {{item.idx+":00"}}</text>
+  </view>
+  
+</view>
