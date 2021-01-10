@@ -11,16 +11,21 @@ Page({
     today: null,
   },
 
-  bindPickerChange: function (e) {
+  bindDateChange: function (e) {
     this.setData({
       date: e.detail.value
     })
-    console.log(date);
   },
 
   submit: function (e) {
     wx.switchTab({
       url: '../MyTiming/MyTiming',
+    })
+  },
+
+  return: function (e) {
+    wx.navigateBack({
+      delta: 0,
     })
   },
 

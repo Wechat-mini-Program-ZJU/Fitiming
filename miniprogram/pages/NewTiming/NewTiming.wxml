@@ -13,5 +13,8 @@
     </picker>
 </view>
 <view class="action">
+    <button class="cu-btn bg-white" bindtap="return">返回</button>
+    <view style="width: 150rpx;"></view>
+    <!-- 用来占位的 -->
     <button class="cu-btn bg-white" bindtap="submit">提交</button>
 </view>
