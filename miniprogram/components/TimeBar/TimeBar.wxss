@@ -2,6 +2,7 @@
 
 .particle{
   width: 140rpx;
-  height: 70rpx;
-  border-radius: 10px;
+  height: 90rpx;
+  border-radius: 10rpx;
+  padding-top: 20rpx;
 }
