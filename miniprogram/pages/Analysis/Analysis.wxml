@@ -5,3 +5,10 @@
 </cu-custom>
 
 <text>miniprogram/pages/Analysis.wxml</text>
+
+<view class="container">
+  <TimePoint></TimePoint>
+  <TimeBar></TimeBar>
+  <AnalysisForm></AnalysisForm>
+
+</view>

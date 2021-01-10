@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "TimeBar":"../../components/TimeBar/TimeBar",
+    "TimePoint":"../../components/TimePoint/TimePoint",
+    "AnalysisForm":"../../components/AnalysisForm/AnalysisForm"
+  },
+  "component": true
 }
