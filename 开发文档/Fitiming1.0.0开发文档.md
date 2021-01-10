@@ -8,6 +8,7 @@
 | v1.0.1 | 颜尔汛 | 20.1.5   | TimeFormCard组件初版                                         |
 | v1.0.2 | 徐瑞柏 | 20.1.9   | 新增组件及页面<br/>新增colorUI<br/>新增基于colorUI的自定义Tabbar |
 | v1.0.3 | 徐瑞柏 | 20.1.10  | 删除TimeFormQuest组件<br/>更新有关My Timing页面的描述<br/>细化其他一些页面的描述 |
+| v1.0.4 | 颜尔汛 | 20.1.10  | NewTiming页面初版<br/>                     |
 
 ## 简介
 
