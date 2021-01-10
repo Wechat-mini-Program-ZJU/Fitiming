@@ -6,12 +6,23 @@ page{
 .container {
   display: flex;
   flex-direction: row;
-  padding:20rpx;
-   align-items: flex-start;
+  padding: 20rpx;
+  align-items: flex-start;
+  height: 100vh;
   /*padding: 50rpx;
   background-color: white;
   margin: 20rpx;
   border-radius: 10px;
   height: 200rpx; */
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.BarandPoint{
+  display: flex;
+  flex-direction: row;
+  /* height: 1150rpx; */
+  /* height: 100% !important; */
+  height: 100vh;
+  justify-content: space-around;
+  /* padding-bottom: 1rpx; */
 }

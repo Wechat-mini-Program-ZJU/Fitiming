@@ -11,12 +11,12 @@ Component({
    * 组件的初始数据
    */
   data: {
-    particle:[{'q':'a'}],
-    array: [{
-      message: 'foo',
-    }, {
-      message: 'bar'
-    }]
+    particle:[],
+    // array: [{
+    //   message: 'foo',
+    // }, {
+    //   message: 'bar'
+    // }]
   },
 
   /**

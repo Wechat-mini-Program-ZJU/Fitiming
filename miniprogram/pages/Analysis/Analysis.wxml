@@ -5,8 +5,14 @@
 </cu-custom>
 
 <view class="container">
-  <TimePoint></TimePoint>
-  <TimeBar></TimeBar>
+  <scroll-view scroll-y="true" style="" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view class="BarandPoint"> 
+      <TimePoint></TimePoint>
+      <TimeBar></TimeBar>
+    </view>
+    
+  </scroll-view>
+  
   <AnalysisForm></AnalysisForm>
 
 </view>
