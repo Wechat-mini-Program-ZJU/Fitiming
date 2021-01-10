@@ -16,7 +16,7 @@
 
 <view class="cu-bar bg-white margin-top">
   <view class="action">
-    <text class="cuIcon-title text-orange "></text> 底部窗口
+    <text class="cuIcon-title text-orange"></text> 底部窗口
   </view>
   <view class="action">
     <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="bottomModal">Bottom</button>

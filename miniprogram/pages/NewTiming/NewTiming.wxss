@@ -1,1 +1,33 @@
 /* miniprogram/pages/NewTiming/NewTiming.wxss */
+.choose-date {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 30rpx;
+    padding: 30rpx;
+    border-radius: 20rpx;
+    box-shadow: 0 0 0 1rpx rgba(200, 200, 200, 0.1);
+    font-size: 1.2em;
+}
+
+.picker-title {
+    width: 200rpx;
+}
+
+picker {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.show-picker {
+    width: 300rpx;
+}
+
+.action {
+    margin: auto;
+    width: 50%;
+}
+
+.action button {
+    height: 80rpx;
+}

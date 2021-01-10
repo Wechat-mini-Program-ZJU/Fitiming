@@ -44,6 +44,10 @@ Component({
         })
       }
     },
-    
+    newTiming(e) {
+      wx.navigateTo({
+        url: '../pages/NewTiming/NewTiming',
+      })
+    }
   }
 })

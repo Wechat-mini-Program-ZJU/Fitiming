@@ -1,3 +1,5 @@
+const util = require("../../utils/util")
+
 // miniprogram/pages/NewTiming/NewTiming.js
 Page({
 
@@ -5,14 +7,32 @@ Page({
    * 页面的初始数据
    */
   data: {
+    date: null,
+    today: null,
+  },
 
+  bindPickerChange: function (e) {
+    this.setData({
+      date: e.detail.value
+    })
+    console.log(date);
+  },
+
+  submit: function (e) {
+    wx.switchTab({
+      url: '../MyTiming/MyTiming',
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var tmp = new Date();
+    this.setData({
+      today: tmp.getFullYear() + "-" + (tmp.getMonth() + 1) + "-" + tmp.getDate(),
+      date: tmp.getFullYear() + "-" + (tmp.getMonth() + 1) + "-" + tmp.getDate()
+    })
   },
 
   /**

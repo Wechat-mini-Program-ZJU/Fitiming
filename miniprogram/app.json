@@ -1,11 +1,12 @@
 {
   "pages": [
+    "pages/NewTiming/NewTiming",
     "pages/MyTiming/MyTiming",
     "pages/index/index",
     "pages/logs/logs",
     
     "pages/More/More",
-    "pages/NewTiming/NewTiming",
+    
     "pages/Analysis/Analysis",
     "pages/MyCenter/MyCenter"
   ],
@@ -25,7 +26,6 @@
       },
       {
         "pagePath": "pages/More/More",
-        
         "text": "More"
       }
     ]
