@@ -1,4 +1,4 @@
-const { formlist } = require("../../data/formList");
+// const { formlist } = require("../../data/formList");
 // miniprogram/pages/MyTiming/MyTiming.js
 
 var formList = require("../../data/formList");
@@ -58,18 +58,19 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-      this.setData({
-        form: formList.formlist
-      })
-      console.log(formList)
-      console.log(this.data.form)
+      // this.setData({
+      //   form: formList.formlist
+      // })
+      // console.log(formList)
+      // console.log(this.data.form)
+      console.log("MyTiming is onLoad")
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+      console.log("MyTiming is onReady")
     },
 
     /**
@@ -77,6 +78,11 @@ Page({
      */
     onShow: function () {
         this.tabBar()
+        this.setData({
+          form: formList.formlist
+        })
+        console.log(this.data.form)
+        console.log("MyTiming is onShow")
     },
     tabBar() {
         if (typeof this.getTabBar === 'function' && this.getTabBar()) {
@@ -90,17 +96,19 @@ Page({
      * 生命周期函数--监听页面隐藏
      */
     onHide: function () {
+      
       this.setData({
         // modalName: null,
         showQuestFlag: 0
       })
+      console.log("MyTiming is onHide")
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
     onUnload: function () {
-
+      console.log("MyTiming is onUnload")
     },
 
     /**

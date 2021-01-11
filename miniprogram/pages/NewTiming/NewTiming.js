@@ -1,4 +1,5 @@
-const util = require("../../utils/util")
+const util = require("../../utils/util");
+var formList = require("../../data/formList.js")
 
 // miniprogram/pages/NewTiming/NewTiming.js
 Page({
@@ -9,6 +10,8 @@ Page({
   data: {
     date: null,
     today: null,
+    formName: null,
+    formNotes: null,
   },
 
   bindDateChange: function (e) {
@@ -17,10 +20,21 @@ Page({
     })
   },
 
-  submit: function (e) {
+  submit_create: function (e) {
+    console.log("submit is run in NewTiming.js")
     wx.switchTab({
       url: '../MyTiming/MyTiming',
     })
+    formList.NewTimeForm({
+      formName: this.data.formName,
+      formStatus: "未发布",
+      peopleCount: 0,
+      quest: false,
+      date: this.data.date,
+      notes: this.data.formNotes,
+    })
+    console.log("NewTimeForm is run in NewTiming.js")
+    console.log(formList.formlist)
   },
 
   return: function (e) {
@@ -38,6 +52,7 @@ Page({
       today: tmp.getFullYear() + "-" + (tmp.getMonth() + 1) + "-" + tmp.getDate(),
       date: tmp.getFullYear() + "-" + (tmp.getMonth() + 1) + "-" + tmp.getDate()
     })
+    console.log(this.data.date)
   },
 
   /**

@@ -10,3 +10,7 @@
 .option{
   padding: 20rpx;
 }
+
+.container{
+  padding-bottom: 100rpx;
+}

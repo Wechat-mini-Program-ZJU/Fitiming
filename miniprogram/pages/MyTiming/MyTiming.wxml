@@ -9,10 +9,13 @@
 <!-- <text>miniprogram/pages/MyTiming/MyTiming.wxml</text> -->
 <view style="padding-bottom: 40rpx"></view>
 
-<view wx:for="{{form}}" wx:key="index" wx:for-index="index">
-  <TimeFormCard bindtap="handleCard" data-target="{{item}}" form="{{item}}"></TimeFormCard>
-  
+<view class="container">
+  <view wx:for="{{form}}" wx:key="index" wx:for-index="index">
+    <TimeFormCard bindtap="handleCard" data-target="{{item}}" form="{{item}}"></TimeFormCard>
+    
+  </view>
 </view>
+
 
 <view wx:if="{{showQuestFlag}}" class="cu-modal bottom-modal show"><!-- 这里class里必须设置show 原本用它控制底部窗口显示 -->
   <view class="cu-dialog">
