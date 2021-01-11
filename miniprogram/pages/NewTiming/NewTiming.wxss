@@ -23,7 +23,7 @@ picker {
     width: 300rpx;
 }
 
-.action {
+.submit {
     margin: auto;
     width: 50%;
     display: flex;
