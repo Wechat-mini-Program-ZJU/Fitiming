@@ -10,19 +10,21 @@
 <view style="padding-bottom: 40rpx"></view>
 
 <view class="container">
-  <view wx:for="{{form}}" wx:key="index" wx:for-index="index">
-    <TimeFormCard bindtap="handleCard" data-target="{{item}}" form="{{item}}"></TimeFormCard>
+  <view wx:if='{{refresh_control}}' wx:for="{{form}}" wx:key="index" wx:for-index="index">
+    <TimeFormCard bindtap="handleCard" data-id='{{index}}' data-target="{{item}}" form="{{item}}"></TimeFormCard>
     
   </view>
 </view>
+
+<!-- <button class="cu-btn bg-blue shadow-blur round" bindtap="submit_create">重刷新测试</button> -->
 
 
 <view wx:if="{{showQuestFlag}}" class="cu-modal bottom-modal show"><!-- 这里class里必须设置show 原本用它控制底部窗口显示 -->
   <view class="cu-dialog">
     <view>
-      <view class="action text-blue option" hidden="{{formStatus == '已发布' ? false : true}}" bindtap="stopForm">停止统计</view>
-      <view class="action text-blue option" hidden="{{formStatus == '未发布' ? false : true}}" bindtap="postForm">发布统计</view>
-      <view class="action text-blue option" hidden="{{formStatus == '已停止' ? false : true}}" bindtap="startForm">开始统计</view>
+      <view class="action text-blue option" hidden="{{formItem.formStatus == '已发布' ? false : true}}" bindtap="stopForm">停止统计</view>
+      <view class="action text-blue option" hidden="{{formItem.formStatus == '未发布' ? false : true}}" bindtap="postForm">发布统计</view>
+      <view class="action text-blue option" hidden="{{formItem.formStatus == '已停止' ? false : true}}" bindtap="startForm">开始统计</view>
     </view>
     <view class="cross-line"></view>
     <view class="action text-blue option" bindtap="analyseForm">统计分析</view>

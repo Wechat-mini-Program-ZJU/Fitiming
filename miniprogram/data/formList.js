@@ -1,3 +1,6 @@
+// var index =null;
+// var howmany = null;
+
 var formlist = [
   {
     formName: "大内建时间意向调查",
@@ -37,7 +40,13 @@ function NewTimeForm( array ) {
   console.log("NewTimeForm is run in formList.js")
 }
 
+function DeleteTimeForm( index,howmany ) {
+  formlist.splice(index,howmany)
+  console.log("DeleteTimeForm is run in formList.js")
+}
+
 module.exports={
   formlist: formlist,
   NewTimeForm: NewTimeForm,
+  DeleteTimeForm: DeleteTimeForm,
 }

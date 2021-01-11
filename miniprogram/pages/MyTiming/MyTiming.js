@@ -9,7 +9,13 @@ Page({
      */
     data: {
         form: [],
+        deletedForm:[],
         showQuestFlag: 0,
+        a:1,
+        b:2,
+        index:null,
+        formItem: [],
+        refresh_control: true
         
 
     },
@@ -21,21 +27,22 @@ Page({
     },
     handleCard: function(e){
       // console.log("formList", formList)
+      console.log("e.currentTarget.dataset.id", e.currentTarget.dataset.id)
       console.log("e.currentTarget.dataset.target", e.currentTarget.dataset.target)
       // console.log("e.currentTarget.dataset.target.quest", e.currentTarget.dataset.target.quest)
-      //console.log("form before:",form)
+      // console.log("form before:",form)
       this.setData({
-        
+        index: e.currentTarget.dataset.id,
         // form.quest : !form.quest
         formItem: e.currentTarget.dataset.target,
-        quest: e.currentTarget.dataset.target.quest,
-        formName: e.currentTarget.dataset.target.formName,
-        formStatus: e.currentTarget.dataset.target.formStatus,
-        peopleCount: e.currentTarget.dataset.target.peopleCount,
+        // quest: e.currentTarget.dataset.target.quest,
+        // formName: e.currentTarget.dataset.target.formName,
+        // formStatus: e.currentTarget.dataset.target.formStatus,
+        // peopleCount: e.currentTarget.dataset.target.peopleCount,
         //formList.formlist.quest: !formList.formlist.quest//
       })
       this.showQuest()
-      //console.log("formItem after:",formItem)
+      // console.log("formItem after:",formItem)
     },
     // showModal(e) {
     //   this.setData({
@@ -53,6 +60,23 @@ Page({
         url: `../Analysis/Analysis?formName=${this.data.form.formName}`,
       })
     },
+    deleteForm: function(e){
+      console.log("index", this.data.index)
+      formList.DeleteTimeForm(this.data.index,1)
+      console.log("NewTimeForm is run in NewTiming.js")
+      console.log(formList.formlist)
+      this.onShow()
+      this.setData({
+        showQuestFlag: 0,
+      })
+    },
+    // submit_create: function(e){
+    //   this.setData({
+    //     refresh_control: tur,
+    //     showQuestFlag: 0,
+    //   })
+    // },
+    
 
     /**
      * 生命周期函数--监听页面加载
