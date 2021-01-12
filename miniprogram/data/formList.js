@@ -3,6 +3,7 @@
 
 var formlist = [
   {
+    formId: "BigInsideConsruct",
     formName: "大内建时间意向调查",
     formStatus: "已发布",
     peopleCount: 29,
@@ -11,6 +12,7 @@ var formlist = [
     notes: "一起来玩呀",
   },
   {
+    formId: "0001",
     formName: "1",
     formStatus: "未发布",
     peopleCount: 0,
@@ -19,6 +21,7 @@ var formlist = [
     notes: null,
   },
   {
+    formId: "GroupMeeting-20191111",
     formName: "思修小组会议",
     formStatus: "已停止",
     peopleCount: 6,
@@ -30,6 +33,7 @@ var formlist = [
 
 function NewTimeForm( array ) {
   formlist.push({
+    formId: array.formId,
     formName: array.formName,
     formStatus: array.formStatus,
     peopleCount: array.peopleCount,

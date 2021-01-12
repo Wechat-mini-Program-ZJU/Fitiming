@@ -40,7 +40,7 @@ Component({
       this.setData({
         particle: temp
       })
-      console.log(this.data.particle)
+      // console.log(this.data.particle)
     }
   },
 

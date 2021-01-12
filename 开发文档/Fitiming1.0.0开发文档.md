@@ -166,7 +166,7 @@ ColorUI是一个css库，在这个项目中，我们借助 Color UI-使用原生
 | v0.1.1 | 徐瑞柏                       | 20.12.25 | 制作初版原型<br/>撰写初版开发文档，撰写产品大致的结构框架和简介，以及各模块概况及规划。 |
 | v0.2.0 | 徐瑞柏                       | 20.1.4   | 新建miniprogram相关文件夹                                    |
 | v0.2.1 | 颜尔汛                       | 20.1.5   | 完成TimeFormCard组件初版                                     |
-| v0.3.0 | 徐瑞柏                       | 20.1.9   | 更新开发文档<br/>新建cloudfunction文件夹<br/>导入Color UI库<br/>新增若干Tab页<br/>创建基于colorUI的自定义Tabbar |
+| v0.3.0 | 徐瑞柏                       | 20.1.9   | 更新产品原型<br/>更新开发文档<br/>新建cloudfunction文件夹<br/>导入Color UI库<br/>新增若干Tab页<br/>创建基于colorUI的自定义Tabbar |
 | v0.3.1 | 徐瑞柏                       | 20.1.9   | 实现自定义tabBar切换可以高亮<br/>实现Tab页My Timing 和 More页面正常跳转<br/>更新全局样式<br/>更新TimeFormCard组件样式<br/>完成My Timing页面初版<br/>实现More页面上半部分<br/>实现TimeFormCard状态颜色可见<br/>完成基于colorUI的底部窗口界面撰写<br/>新增analyseForm函数，实现页面跳转<br/>优化控制台显示 |
 | v0.3.2 | 颜尔汛                       | 20.1.9   | 合并开发分支                                                 |
 | v0.3.3 | 颜尔汛<br/>黄余飞<br/>徐瑞柏 | 20.1.10  | 更新开发文档<br/>新增images文件夹<br/>新增独立绘制的svg图片若干<br/>更新部分页面样式<br/>完成TimeBar, TimePoint, AnalysisForm组件<br/>实现NewTiming页面正常跳转<br/>完成NewTiming页面初版<br/>完成More页面初版<br/>新增More相关索引页面<br/>合并开发分支 |

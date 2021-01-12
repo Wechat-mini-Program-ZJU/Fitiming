@@ -26,6 +26,7 @@ Page({
       url: '../MyTiming/MyTiming',
     })
     formList.NewTimeForm({
+      formId: this.data.date+' '+this.data.formName,
       formName: this.data.formName,
       formStatus: "未发布",
       peopleCount: 0,

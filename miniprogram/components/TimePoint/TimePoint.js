@@ -37,7 +37,7 @@ Component({
       this.setData({
         point: temp
       })
-      console.log(this.data.point)
+      // console.log(this.data.point)
     }
   },
 })
