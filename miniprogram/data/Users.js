@@ -33,7 +33,7 @@ var users=[
     formInfo:[
       {
         formid:"GroupMeeting-20191111",
-        availabletime:[false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,true,true,false,false,false,false,false,false,false],
+        availabletime:[false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,true,true,true,false,false,false,false,false,false],
       },
     ]
   },
@@ -52,7 +52,7 @@ var users=[
     formInfo:[
       {
         formid:"GroupMeeting-20191111",
-        availabletime:[false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,true,true,false,false,false,false,false,false,false],
+        availabletime:[false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,true,true,true,false,false,false,false,false,false],
       },
     ]
   },
@@ -79,7 +79,7 @@ var users=[
     userid: 4,
     openid: null,
     userInfo:{
-      avatarUrl: "http://heishenhua.com/img/Concept/Concept_wukong.jpg",
+      avatarUrl: "https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/baike/w%3D268%3Bg%3D0/sign=141ddc71c55c1038247ec9c48a2af42e/0eb30f2442a7d93335d83818ae4bd11373f0016d.jpg",
       city:"Hefei",
       country:"China",
       gender:"1",
@@ -90,7 +90,7 @@ var users=[
     formInfo:[
       {
         formid:"GroupMeeting-20191111",
-        availabletime:[false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,true,true,false,false,false,false,false,false,false],
+        availabletime:[false,false,false,false,false,false,false,false,false,true,true,true,true,true,true,true,true,false,false,false,false,false,false,false],
       },
     ]
   },
@@ -109,7 +109,7 @@ var users=[
     formInfo:[
       {
         formid:"GroupMeeting-20191111",
-        availabletime:[false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,true,true,false,false,false,false,false,false,false],
+        availabletime:[false,false,false,false,false,false,false,true,true,true,true,false,true,true,true,true,false,false,false,false,false,false,false,false],
       },
     ]
   },

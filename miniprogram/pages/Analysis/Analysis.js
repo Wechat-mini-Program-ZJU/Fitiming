@@ -34,23 +34,23 @@ Page({
 
   generateFormItem: function(formId){
     console.log("generateFormItem is run in Analysis.js")
-    console.log("genFormItem.formId:" ,formId)
+    // console.log("genFormItem.formId:" ,formId)
 
     var _this = this
     _this.setData({
       lenformList: formList.formlist.length
     })
-    console.log("lenformList", _this.data.lenformList)
+    // console.log("lenformList", _this.data.lenformList)
 
     let index
-    console.log("index before:", index)
+    // console.log("index before:", index)
     for( let i=0; i<_this.data.lenformList; i++){
       if(formList.formlist[i].formId == formId) {
         index = i
         break
       }
     }
-    console.log("index after:", index)
+    // console.log("index after:", index)
 
     let formName = "formItem.formName"
     let formStatus= "formItem.formStatus"
@@ -71,10 +71,60 @@ Page({
     })
     console.log("formItem after gen:",_this.data.formItem)
   },
-  generateAalysisFormInfo: function(index){
+
+  generateAalysisFormInfo: function(indexTime){
+    
     console.log("generateAalysisFormInfo is run in Analysis.js")
-    console.log("generateAalysisFormInfo.index:" ,index)
+    console.log("generateAalysisFormInfo.indexTime:" ,indexTime)
+
+    var _this = this
+    console.log("analysisFormInfo before gen:",_this.data.analysisFormInfo)
+
+    let indexUsers
+    let indexParticipant
+    let indexFormInfo
+    let lenUsers = Users.users.length
+    let lenParticipant = _this.data.formItem.participant.length
+    // console.log("lenParticipant:",lenParticipant)
+    let lenParticipantTime = 0
+    let participantTime = []
+
+    for ( indexUsers =0; indexUsers < lenUsers; indexUsers++){
+      for( indexParticipant = 0; indexParticipant < lenParticipant; indexParticipant++){
+        if( Users.users[indexUsers].userid == _this.data.formItem.participant[indexParticipant].userid){
+          // console.log(Users.users[indexUsers].userid,"is mateched")
+          for( indexFormInfo =0; indexFormInfo < Users.users[indexUsers].formInfo.length; indexFormInfo++){
+            if( Users.users[indexUsers].formInfo[indexFormInfo].formid == _this.data.formItem.formId){
+              // console.log(Users.users[indexUsers].formInfo[indexFormInfo],"is finded")
+              if(Users.users[indexUsers].formInfo[indexFormInfo].availabletime[indexTime] == true) {
+                lenParticipantTime++
+                participantTime.push(Users.users[indexUsers].userInfo)
+              }
+              break
+            }
+          }
+          break
+        }
+      }
+    }
+
+    console.log("participantTime:",participantTime)
+    console.log("lenParticipantTime", lenParticipantTime)
+
+
+    let _timeDuration= "analysisFormInfo.timeDuration"
+    let _peopleCountTime= "analysisFormInfo.peopleCountTime"
+    let _participantTime= "analysisFormInfo.participantTime"
+
+    _this.setData({
+      [_timeDuration]: indexTime+":00 - "+(indexTime+1)+":00",
+      [_peopleCountTime]: lenParticipantTime,
+      [_participantTime]: participantTime,
+    })
+    console.log("analysisFormInfo after gen:",_this.data.analysisFormInfo)
+    
   },
+
   showIndex: function(e){
     console.log("Analysis",this.data.index)
   },

@@ -9,6 +9,9 @@ Component({
    */
   properties: {
     formName: String,
+    analysisFormInfo: Object,
+    // participantTime: Array,
+
   },
 
   /**

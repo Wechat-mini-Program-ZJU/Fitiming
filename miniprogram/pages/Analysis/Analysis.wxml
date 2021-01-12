@@ -13,7 +13,8 @@
     
   </scroll-view>
   
-  <AnalysisForm formName="{{formItem.formName}}">
+  <!-- <AnalysisForm formName="{{formItem.formName}}" timeDuration="{{analysisFormInfo.timeDuration}}" peopleCountTime="{{analysisFormInfo.peopleCountTime}}" participantTime="{{analysisFormInfo.participantTime}}"> -->
+    <AnalysisForm formName="{{formItem.formName}}" analysisFormInfo="{{analysisFormInfo}}">
     
   </AnalysisForm>
   <!-- <text bindtap="showIndex">调试用</text> -->
