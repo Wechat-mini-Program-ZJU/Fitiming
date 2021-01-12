@@ -13,7 +13,7 @@
     
   </scroll-view>
   
-  <AnalysisForm formName="{{formName}}">
+  <AnalysisForm formName="{{formItem.formName}}">
     
   </AnalysisForm>
   <!-- <text bindtap="showIndex">调试用</text> -->
