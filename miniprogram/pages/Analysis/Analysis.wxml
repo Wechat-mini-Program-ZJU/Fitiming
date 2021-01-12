@@ -13,7 +13,9 @@
     
   </scroll-view>
   
-  <AnalysisForm></AnalysisForm>
+  <AnalysisForm formName="{{formName}}">
+    
+  </AnalysisForm>
   <!-- <text bindtap="showIndex">调试用</text> -->
 
 </view>

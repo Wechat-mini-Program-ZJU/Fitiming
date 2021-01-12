@@ -33,16 +33,10 @@ Page({
       // console.log("form before:",form)
       this.setData({
         index: e.currentTarget.dataset.id,
-        // form.quest : !form.quest
         formItem: e.currentTarget.dataset.target,
-        // quest: e.currentTarget.dataset.target.quest,
-        // formName: e.currentTarget.dataset.target.formName,
-        // formStatus: e.currentTarget.dataset.target.formStatus,
-        // peopleCount: e.currentTarget.dataset.target.peopleCount,
-        //formList.formlist.quest: !formList.formlist.quest//
       })
       this.showQuest()
-      // console.log("formItem after:",formItem)
+      console.log("formItem after:",this.data.formItem)
     },
     // showModal(e) {
     //   this.setData({
@@ -57,7 +51,7 @@ Page({
     },
     analyseForm: function(e){
       wx.navigateTo({
-        url: `../Analysis/Analysis?formName=${this.data.form.formName}`,
+        url: `../Analysis/Analysis?formId=${this.data.formItem.formId}&formName=${this.data.formItem.formName}`,
       })
     },
     deleteForm: function(e){

@@ -1,6 +1,6 @@
 <!--components/AnalysisForm/AnalysisForm.wxml-->
 <view class="AnalysisForm">
-  <view class="title">思修小组会议</view>
+  <view class="title-slot" style="text-align:center">{{formName}}</view>
   <view class="title">时间段 : 未选中</view>
   <view  class="asrow">
     <view wx:for="{{9}}" class="ascolumn">

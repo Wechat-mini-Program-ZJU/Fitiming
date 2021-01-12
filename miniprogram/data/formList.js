@@ -28,6 +28,26 @@ var formlist = [
     quest: false,
     date: "2019-11-11",
     notes: "请准时到场，不到需请假",
+    participant:[
+      {
+        userid: 0,
+      },
+      {
+        userid: 1,
+      },
+      {
+        userid: 2,
+      },
+      {
+        userid: 3,
+      },
+      {
+        userid: 4,
+      },
+      {
+        userid: 5,
+      },
+    ]
   }
 ]
 

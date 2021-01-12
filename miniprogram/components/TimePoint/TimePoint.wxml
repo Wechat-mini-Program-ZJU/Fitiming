@@ -1,6 +1,6 @@
 <!--components/TimePoint/TimePoint.wxml-->
 
-<view wx:for="{{point}}">
+<view wx:for="{{point}}" wx:key="index" wx:for-index="index">
   <!-- <view> 666 </view> -->
   <!-- <view> {{item.idx}} </view> -->
   <view class="TimePoint">
