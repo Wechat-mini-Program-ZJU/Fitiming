@@ -8,7 +8,8 @@ var users=[
       country:"Finland",
       gender:"1",
       language:"zh_CN",
-      nickName:"生时饮คิดถึง",
+      // nickName:"生时饮คิดถึง",
+      nickName:"生时饮",
       province:""
     },
     formInfo:[

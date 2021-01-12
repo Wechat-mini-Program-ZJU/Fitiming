@@ -10,6 +10,9 @@ Component({
   properties: {
     formName: String,
     analysisFormInfo: Object,
+    peopleCount: Number,
+    formInfo: Array,
+    _index: Number,
     // participantTime: Array,
 
   },
@@ -35,13 +38,16 @@ Component({
   },
   lifetimes:{
     attached: function(e){
-      console.log("Analysis is attached.")
+      console.log("AnalysisForm is attached.")
+      // console.log("this.properties.analysisFormInfo.peopleCountTime: ",this.properties.analysisFormInfo.peopleCountTime)
+      console.log("this.properties.formInfo: ",this.properties.formInfo)
+      console.log("this.properties.analysisFormInfo:",this.properties.analysisFormInfo)
       // var i,temp=[];
       
       this.setData({
         users:Users.users
       })
-      console.log(this.data.users)
+      console.log("this.data.users",this.data.users)
     }
   }
 })

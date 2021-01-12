@@ -8,15 +8,15 @@
   <scroll-view scroll-y="true" style="" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
     <view class="BarandPoint"> 
       <TimePoint></TimePoint>
-      <TimeBar bind:returnIndex="returnIndexListener"></TimeBar>
+      <TimeBar bind:returnIndex="returnIndexListener" peopleCount="{{formItem.peopleCount}}" formInfo="{{formInfo}}"></TimeBar>
     </view>
     
   </scroll-view>
   
-  <!-- <AnalysisForm formName="{{formItem.formName}}" timeDuration="{{analysisFormInfo.timeDuration}}" peopleCountTime="{{analysisFormInfo.peopleCountTime}}" participantTime="{{analysisFormInfo.participantTime}}"> -->
-    <AnalysisForm formName="{{formItem.formName}}" analysisFormInfo="{{analysisFormInfo}}">
-    
-  </AnalysisForm>
+    <!-- <AnalysisForm formName="{{formItem.formName}}" analysisFormInfo="{{formInfo[index]}}" formInfo="{{formInfo}}" index="{{index}}"> -->
+    <AnalysisForm formName="{{formItem.formName}}" analysisFormInfo="{{analysisFormInfo}}" formInfo="{{formInfo}}" _index="{{index}}"></AnalysisForm>
+
+
   <!-- <text bindtap="showIndex">调试用</text> -->
 
 </view>

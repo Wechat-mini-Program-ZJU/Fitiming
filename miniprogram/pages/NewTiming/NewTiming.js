@@ -33,6 +33,7 @@ Page({
       quest: false,
       date: this.data.date,
       notes: this.data.formNotes,
+      
     })
     console.log("NewTimeForm is run in NewTiming.js")
     console.log(formList.formlist)

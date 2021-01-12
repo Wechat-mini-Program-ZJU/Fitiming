@@ -1,4 +1,6 @@
 /* miniprogram/pages/Analysis.wxss */
+
+
 page{
   /* background-color: #cde5ec; */
   background-color: #cde5ec;
