@@ -8,12 +8,13 @@
   <scroll-view scroll-y="true" style="" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
     <view class="BarandPoint"> 
       <TimePoint></TimePoint>
-      <TimeBar></TimeBar>
+      <TimeBar bind:returnIndex="returnIndexListener"></TimeBar>
     </view>
     
   </scroll-view>
   
   <AnalysisForm></AnalysisForm>
+  <!-- <text bindtap="showIndex">调试用</text> -->
 
 </view>
 

@@ -12,6 +12,8 @@ Component({
    */
   data: {
     particle:[],
+    index: null,
+    item: null,
     // array: [{
     //   message: 'foo',
     // }, {
@@ -23,6 +25,20 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    catchParticle: function(e){
+      this.setData({
+        index: e.currentTarget.dataset.id,
+        item: e.currentTarget.dataset.target
+      })
+      console.log(this.data.index," is catchParticle")
+      this.triggerEvent('returnIndex',{index: this.data.index})
+    },
+    // onTap: function(e){
+    //   console.log("onTap",e)
+    //   var myEventDetail = {} // detail对象，提供给事件监听函数
+    //   var myEventOption = {} // 触发事件的选项
+    //   this.triggerEvent('myevent', myEventDetail, myEventOption)
+    // }
   },
   
   lifetimes:{

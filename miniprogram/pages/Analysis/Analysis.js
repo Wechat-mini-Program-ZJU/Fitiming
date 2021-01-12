@@ -5,9 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-      Users:{
-
-      }
+      Users:null,
+      index:null,
+  },
+  
+  showIndex: function(e){
+    console.log("Analysis",this.data.index)
   },
 
   /**
@@ -64,5 +67,14 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  returnIndexListener:function(e){
+    console.log("returnIndexListener is run in Analysis.js")
+    // console.log(e)
+    // console.log("e.detail",e.detail)
+    console.log("e.detail.index",e.detail.index)
+    this.setData({
+      index: e.detail.index
+    })
+  },
 })

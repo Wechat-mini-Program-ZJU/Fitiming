@@ -13,8 +13,8 @@ var users=[
     },
     formInfo:[
       {
-        formid:"",
-        availabletime:"9,10,11,12,14,15,16,17",
+        formid:"GroupMeeting-20191111",
+        availabletime:[false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,true,true,false,false,false,false,false,false,false],
       },
     ]
   },
@@ -32,8 +32,8 @@ var users=[
     },
     formInfo:[
       {
-        formid:"",
-        availabletime:"9,10,11,12,14,15,16,17",
+        formid:"GroupMeeting-20191111",
+        availabletime:[false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,true,true,false,false,false,false,false,false,false],
       },
     ]
   },
@@ -51,8 +51,8 @@ var users=[
     },
     formInfo:[
       {
-        formid:"",
-        availabletime:"9,10,11,12,14,15,16,17",
+        formid:"GroupMeeting-20191111",
+        availabletime:[false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,true,true,false,false,false,false,false,false,false],
       },
     ]
   },
@@ -70,8 +70,8 @@ var users=[
     },
     formInfo:[
       {
-        formid:"",
-        availabletime:"9,10,11,12,14,15,16,17",
+        formid:"GroupMeeting-20191111",
+        availabletime:[false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,true,true,false,false,false,false,false,false,false],
       },
     ]
   },
@@ -89,8 +89,8 @@ var users=[
     },
     formInfo:[
       {
-        formid:"",
-        availabletime:"9,10,11,12,14,15,16,17",
+        formid:"GroupMeeting-20191111",
+        availabletime:[false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,true,true,false,false,false,false,false,false,false],
       },
     ]
   },
@@ -108,8 +108,8 @@ var users=[
     },
     formInfo:[
       {
-        formid:"",
-        availabletime:"9,10,11,12,14,15,16,17",
+        formid:"GroupMeeting-20191111",
+        availabletime:[false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,true,true,false,false,false,false,false,false,false],
       },
     ]
   },

@@ -1,8 +1,8 @@
 <!--components/TimeBar/TimeBar.wxml-->
 <!-- <text>components/TimeBar/TimeBar.wxml</text> -->
 
-<view wx:for="{{particle}}">
+<view wx:for="{{particle}}" wx:key="index" wx:for-index="index">
   <!-- <view> 666 </view> -->
   <!-- <view> {{item.idx}} </view> -->
-  <image class="particle" catchtap="handleParticle" src="{{'../../images/RoundedRect_lightblue_white1.svg'}}"> </image>
+  <image class="particle" bindtap="catchParticle" data-id='{{index}}' data-target="{{item}}" src="{{'../../images/RoundedRect_lightblue_white1.svg'}}"> </image>
 </view>
