@@ -11,6 +11,7 @@
 | v1.0.4 | 颜尔汛<br/>徐瑞柏 | 20.1.10  | 更新开发日志<br/>TimeBar, TimePoint, AnalysisForm组件及Analysis页面初版<br/>NewTiming页面初版<br/>More页面初版 |
 | v1.0.5 | 徐瑞柏            | 20.1.11  | 更新开发日志<br/>分离版本修订及开发日志<br/>开发文档大纲（标题层级修订） |
 | v1.0.6 | 徐瑞柏            | 20.1.12  | 更新开发日志<br/>新增 架构-前端-关键数据结构                 |
+| v1.0.7 | 徐瑞柏            | 20.1.13  | 更新开发日志                                                 |
 
 # 简介
 
@@ -200,3 +201,5 @@ Analysis页面获取下标index及formList和Users信息，处理后向AnalysisF
 | v0.3.2 | 颜尔汛                       | 20.1.9   | 合并开发分支                                                 |
 | v0.3.3 | 颜尔汛<br/>黄余飞<br/>徐瑞柏 | 20.1.10  | 更新开发文档<br/>新增images文件夹<br/>新增独立绘制的svg图片若干<br/>更新部分页面样式<br/>完成TimeBar, TimePoint, AnalysisForm组件<br/>实现NewTiming页面正常跳转<br/>完成NewTiming页面初版<br/>完成More页面初版<br/>新增More相关索引页面<br/>合并开发分支 |
 | v0.3.4 | 徐瑞柏                       | 20.1.11  | 更新开发文档：分离版本修订及开发日志<br/>实现新建模拟时间统计<br/>实现模拟时间统计删除<br/>更新NewTiming页面样式 |
+| v0.4.0 | 徐瑞柏                       | 20.1.13  | 更新开发文档<br/>实现统计分析TimeBar按人数显示颜色功能<br/>实现点击TimeBar后AnalysisForm显示对应时段参与者的头像和昵称 |
+
