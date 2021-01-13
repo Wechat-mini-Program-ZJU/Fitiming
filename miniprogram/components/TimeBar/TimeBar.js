@@ -87,8 +87,8 @@ Component({
       this.setData({
         density: _density
       })
-      console.log("density after ready:",_density)
-      console.log("density after ready:",this.data.density)
+      // console.log("density after ready:",_density)
+      // console.log("density after ready:",this.data.density)
     }
   },
 
