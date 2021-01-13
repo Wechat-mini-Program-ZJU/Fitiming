@@ -4,4 +4,23 @@
   <view slot="content">个人中心</view>
 </cu-custom>
 
-<text>miniprogram/pages/user/user.wxml</text>
+<view class="cu-list menu">
+    <view class="cu-item arrow">
+      <view class="content show">
+        <text>头像</text>
+        <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1438273599,2608288512&fm=26&gp=0.jpg" class="png" mode="aspectFit"></image>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content show">
+        <text>昵称</text>
+        <text class="text-grey">March comes like a lion</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content show">
+        <text>我的统计</text>
+        <text class="text-grey">详情</text>
+      </view>
+    </view>
+</view>
