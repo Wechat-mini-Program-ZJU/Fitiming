@@ -2,29 +2,6 @@
 const app = getApp();
 Page({
 
-<<<<<<< Updated upstream
-    /**
-     * 页面的初始数据
-     */
-    data: {
-      recents: [],
-      collections: [],
-      motto: 'Hello World',
-      userInfo: {},
-      hasUserInfo: false,
-      canIUse: wx.canIUse('button.open-type.getUserInfo'),
-      userInfo: '',
-      obj: '',
-      
-
-    },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function () {
-      if (app.globalData.userInfo) {
-=======
   /**
    * 页面的初始数据
    */
@@ -58,7 +35,6 @@ Page({
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
->>>>>>> Stashed changes
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
@@ -132,9 +108,6 @@ Page({
    */
   onPullDownRefresh: function () {
 
-<<<<<<< Updated upstream
-    }
-=======
   },
 
   /**
@@ -156,5 +129,4 @@ Page({
       current: 'https://image.weilanwl.com/color2.0/zanCode.jpg' // 当前显示图片的http链接      
     })
   },
->>>>>>> Stashed changes
 })
