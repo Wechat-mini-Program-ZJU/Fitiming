@@ -29,7 +29,7 @@
     <view class="cu-item arrow">
       <navigator class="content" url="../VersionRecords/VersionRecords" hover-class="none">
         <text class="cuIcon-formfill text-green"></text>
-        <text class="text-grey">日志</text>
+        <text class="text-grey">开发日志</text>
       </navigator>
     </view>
     <view class="cu-item arrow">
