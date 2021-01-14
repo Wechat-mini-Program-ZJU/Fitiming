@@ -1,0 +1,9 @@
+<!--components/PreviewForm/PreviewForm.wxml-->
+<view class="PreviewForm">
+  <view class="title-slot" style="text-align:center">{{formName}}</view>
+  <view class="title">统计日期：{{date}}</view>
+
+  <text class="cutoff-line"></text>
+  <view class="title">备注</view>
+  <view class="notes">{{notes}}</view>
+</view>

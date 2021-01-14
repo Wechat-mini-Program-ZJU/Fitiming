@@ -14,3 +14,9 @@
 .container{
   padding-bottom: 100rpx;
 }
+
+.button-share{
+  font-size: 28rpx;
+  box-sizing: border-box;
+  font-weight: normal;
+}

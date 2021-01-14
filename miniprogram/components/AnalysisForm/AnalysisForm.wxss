@@ -4,8 +4,8 @@
 .AnalysisForm {
   background-color: white;
   border-radius: 10px;
-  height: 1150rpx;
-  width: 446rpx;
+  height: 90vh;
+  width: 65vw;
 }
 .title{
   text-align: center;

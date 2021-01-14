@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "Person":"../../components/Person/Person"
+  }
+}

@@ -9,8 +9,9 @@ var formlist = [
     peopleCount: 29,
     quest: false,
     date: "2020-12-10",
-    notes: "一起来玩呀",
+    notes: "一起来玩呀！",
     participant:[],
+    peopleCountTime: [],
   },
   {
     formId: "0001",
@@ -19,8 +20,9 @@ var formlist = [
     peopleCount: 0,
     quest: false,
     date: "2021-1-12",
-    notes: null,
+    notes: "无",
     participant:[],
+    peopleCountTime: [],
   },
   {
     formId: "GroupMeeting-20191111",
@@ -29,7 +31,7 @@ var formlist = [
     peopleCount: 6,
     quest: false,
     date: "2019-11-11",
-    notes: "请准时到场，不到需请假",
+    notes: "请准时到场，不到需请假。",
     participant:[
       {
         userid: 0,

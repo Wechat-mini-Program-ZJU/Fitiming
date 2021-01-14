@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "TimeBar":"../../components/TimeBarPick/TimeBar",
+    "TimePoint":"../../components/TimePoint/TimePoint",
+    "PreviewForm":"../../components/PreviewForm/PreviewForm"
+  }
+}
