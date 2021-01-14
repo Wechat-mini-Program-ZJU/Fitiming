@@ -74,6 +74,16 @@ Page({
         showQuestFlag: 0
       })
     },
+    editForm:function(e){
+      wx.navigateTo({
+        url: `../EditTiming/EditTiming?formId=${this.data.formItem.formId}&formName=${this.data.formItem.formName}&date=${this.data.formItem.date}&notes=${this.data.formItem.notes}`,
+      })
+    },
+    copyForm:function(e){
+      wx.navigateTo({
+        url: `../CopyTiming/CopyTiming?formId=${this.data.formItem.formId}&formName=${this.data.formItem.formName}&date=${this.data.formItem.date}&notes=${this.data.formItem.notes}`,
+      })
+    },
     analyseForm: function(e){
       wx.navigateTo({
         url: `../Analysis/Analysis?formId=${this.data.formItem.formId}&formName=${this.data.formItem.formName}`,
@@ -115,14 +125,14 @@ Page({
       // })
       // console.log(formList)
       // console.log(this.data.form)
-      console.log("MyTiming is onLoad")
+      // console.log("MyTiming is onLoad")
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-      console.log("MyTiming is onReady")
+      // console.log("MyTiming is onReady")
     },
 
     /**
@@ -133,7 +143,7 @@ Page({
         this.setData({
           form: formList.formlist
         })
-        console.log(this.data.form)
+        // console.log(this.data.form)
         console.log("MyTiming is onShow")
     },
     tabBar() {
@@ -160,7 +170,7 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload: function () {
-      console.log("MyTiming is onUnload")
+      // console.log("MyTiming is onUnload")
     },
 
     /**
