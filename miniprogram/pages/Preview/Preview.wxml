@@ -1,0 +1,27 @@
+<!--miniprogram/pages/Preview/Preview.wxml-->
+<!-- <text>miniprogram/pages/Preview/Preview.wxml</text> -->
+<cu-custom bgColor="bg-white " isBack="{{true}}">
+  <view slot="backText"></view>
+  <view slot="content">分享预览</view>
+</cu-custom>
+
+
+<view class="container">
+  <scroll-view scroll-y="true" style="" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view class="BarandPoint"> 
+      <TimePoint></TimePoint>
+      <TimeBar bind:returnIndex="returnIndexListener" peopleCount="{{formItem.peopleCount}}" formInfo="{{formInfo}}"></TimeBar>
+    </view>
+    
+  </scroll-view>
+  
+    <view class="right-part">
+      <PreviewForm formName="{{formItem.formName}}" date="{{formItem.date}}" notes="{{formItem.notes}}"></PreviewForm>
+      <view class="submit-button">
+        <button class="cu-btn bg-blue shadow-blur round" bindtap="submit_create">提交</button>
+      </view>
+      
+    </view>
+    
+</view>
+

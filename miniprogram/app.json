@@ -1,28 +1,29 @@
 {
 <<<<<<< Updated upstream
   "pages": [
-    
     "pages/MyTiming/MyTiming",
     "pages/index/index",
     "pages/logs/logs",
-    
     "pages/More/More",
     "pages/NewTiming/NewTiming",
     "pages/Analysis/Analysis",
-    "pages/MyCenter/MyCenter"
+    "pages/MyCenter/MyCenter",
+    "pages/user/user",
+    "pages/VersionRecords/VersionRecords",
+    "pages/Preview/Preview"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Fitiming",
     "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"    
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "custom": true,
     "list": [
       {
-        "pagePath": "pages/MyTiming/MyTiming",       
+        "pagePath": "pages/MyTiming/MyTiming",
         "text": "My Timing"
       },
       {
@@ -32,7 +33,7 @@
     ]
   },
   "usingComponents": {
-      "cu-custom":"/colorui/components/cu-custom"
+    "cu-custom": "/colorui/components/cu-custom"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

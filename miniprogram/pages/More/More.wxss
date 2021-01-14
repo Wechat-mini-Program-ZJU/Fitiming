@@ -1,4 +1,6 @@
 /* miniprogram/pages/More/More.wxss */
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -47,4 +49,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.button-sp-area{
+  margin: 0 auto;
+  width: 100% !important;
 }

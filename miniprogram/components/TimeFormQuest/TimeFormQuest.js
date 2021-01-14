@@ -21,6 +21,17 @@ Component({
      * 组件的方法列表
      */
     methods: {
+        showModal(e) {
+            this.setData({
+              modalName: e.currentTarget.dataset.target
+            })
+          },
+          hideModal(e) {
+            this.setData({
+              modalName: null,
+              showQuestFlag: 0
+            })
+          },
 
     }
 })

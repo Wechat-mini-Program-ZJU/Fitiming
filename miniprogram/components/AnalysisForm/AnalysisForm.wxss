@@ -1,1 +1,46 @@
 /* components/AnalysisForm/AnalysisForm.wxss */
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+.AnalysisForm {
+  background-color: white;
+  border-radius: 10px;
+  height: 90vh;
+  width: 65vw;
+}
+.title{
+  text-align: center;
+  width:100%; 
+  height:27px;
+  font-size: medium;
+  padding:10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title-slot{
+  text-align: center;
+  width:100%; 
+  height:27px;
+  font-size: medium;
+  padding:10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.asrow{
+  /* justify-content: space-between;
+  width: min-content; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 31rpx;
+  justify-content: center;
+}
+.ascolumn{
+  display: flex;
+  flex-direction: column;
+  margin:10rpx;
+}
+.mid{
+  display: flex;
+  justify-content: center;
+}
+.margin{
+  margin:10rpx;
+}

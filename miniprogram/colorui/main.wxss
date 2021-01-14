@@ -2507,7 +2507,7 @@ button.icon.lg {
 .cu-modal.bottom-modal .cu-dialog {
 	width: 100%;
 	border-radius: 20rpx;
-	padding: 50rpx;
+	padding: 10rpx;
 
 }
 
