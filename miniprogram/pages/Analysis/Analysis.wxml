@@ -15,8 +15,7 @@
 
   </scroll-view>
 
-  <!-- <AnalysisForm formName="{{formItem.formName}}" analysisFormInfo="{{formInfo[index]}}" formInfo="{{formInfo}}" index="{{index}}"> -->
-  <AnalysisForm formName="{{formItem.formName}}" analysisFormInfo="{{analysisFormInfo}}" formInfo="{{formInfo}}"
+  <AnalysisForm formName="{{formItem.name}}" analysisFormInfo="{{analysisFormInfo}}" formInfo="{{formInfo}}"
     _index="{{index}}"></AnalysisForm>
 
 

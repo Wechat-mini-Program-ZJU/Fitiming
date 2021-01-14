@@ -41,98 +41,85 @@ Page({
       name: this.data.formItem.name,
       owner: this.data.formItem.owner
     }).get({
+      // 在数据库中查找问卷
       success: res => {
         // console.log("res: ", res)
+        // 对问卷的所有填写结果进行统计
         res.data[0].result.forEach(e => {
-          for (t = 0; t < 24; t++) {
-
-            if (e.availabletime[t] == true) {
-              peopleCountTime[t]++
-
-
-              db.collection('user').where({
-                username: e.participant
-              }).get({
-                success: res => {
-                  // console.log("res.data:", res.data)
+          // console.log(e)
+          // 查找参与者信息
+          db.collection('user').where({
+            username: e.participant
+          }).get({
+            success: res => {
+              // console.log("res.data:", res.data)
+              // 统计
+              for (t = 0; t < 24; t++) {
+                if (e.availabletime[t] == true) {
+                  peopleCountTime[t]++
+                  // console.log(peopleCountTime)
                   participantTime[t].push({
                     username: e.participant,
                     gender: res.data[0].gender,
                     avatar: res.data[0].avatar
                   })
                 }
-              })
+              }
+
+              for (t = 0; t < 24; t++) { //t作为时间点（段）的Index
+                // let _timeDuration= 'formInfo['+t+'].timeDuration'
+                let _peopleCountTime = 'formInfo[' + t + '].peopleCountTime'
+                let _participantTime = 'formInfo[' + t + '].participantTime'
+                _this.setData({
+                  // [_timeDuration]: indexTime+":00 - "+(indexTime+1)+":00",
+                  [_peopleCountTime]: peopleCountTime[t],
+                  [_participantTime]: participantTime[t],
+                })
+              }
+              // console.log("formInfo after setData:", _this.data.formInfo) //打印setData后的formInfo
             }
-          }
-        });
+          })
+        })
       }
     })
-
-    for (t = 0; t < 24; t++) { //t作为时间点（段）的Index
-      // let _timeDuration= 'formInfo['+t+'].timeDuration'
-      let _peopleCountTime = 'formInfo[' + t + '].peopleCountTime'
-      let _participantTime = 'formInfo[' + t + '].participantTime'
-      _this.setData({
-        // [_timeDuration]: indexTime+":00 - "+(indexTime+1)+":00",
-        [_peopleCountTime]: peopleCountTime[t],
-        [_participantTime]: participantTime[t],
-      })
-    }
-    console.log("formInfo after setData:", _this.data.formInfo) //打印setData后的formInfo
-
+    // console.log("part: ", peopleCountTime, participantTime)
   },
 
   generateAalysisFormInfo: function (indexTime) {
-
-    // console.log("generateAalysisFormInfo is run in Analysis.js")
-    // console.log("generateAalysisFormInfo.indexTime:" ,indexTime)
-
-    var _this = this
-    // console.log("analysisFormInfo before gen:",_this.data.analysisFormInfo)
-
-    let indexUsers
-    let indexParticipant
-    let indexFormInfo
-    let lenUsers = Users.users.length
-    let lenParticipant = _this.data.formItem.participant.length
-    // console.log("lenParticipant:",lenParticipant)
     let lenParticipantTime = 0
     let participantTime = []
-
-    for (indexUsers = 0; indexUsers < lenUsers; indexUsers++) {
-      for (indexParticipant = 0; indexParticipant < lenParticipant; indexParticipant++) {
-        if (Users.users[indexUsers].userid == _this.data.formItem.participant[indexParticipant].userid) {
-          // console.log(Users.users[indexUsers].userid,"is mateched")
-          for (indexFormInfo = 0; indexFormInfo < Users.users[indexUsers].formInfo.length; indexFormInfo++) {
-            if (Users.users[indexUsers].formInfo[indexFormInfo].formid == _this.data.formItem.formId) {
-              // console.log(Users.users[indexUsers].formInfo[indexFormInfo],"is finded")
-              if (Users.users[indexUsers].formInfo[indexFormInfo].availabletime[indexTime] == true) {
-                lenParticipantTime++
-                participantTime.push(Users.users[indexUsers].userInfo)
+    const db = wx.cloud.database()
+    db.collection('form').where({
+      name: this.data.formItem.name,
+      owner: this.data.formItem.owner
+    }).get({
+      success: res => {
+        res.data[0].result.forEach(e => {
+          if (e.availabletime[indexTime] == true) {
+            lenParticipantTime++
+            db.collection('user').where({
+              username: e.participant
+            }).get({
+              success: res => {
+                participantTime.push({
+                  nickName: e.participant,
+                  avatarUrl: res.data[0].avatar,
+                  gender: res.data[0].gender
+                })
               }
-              break
-            }
+            })
           }
-          break
-        }
+        })
+        this.setData({
+          analysisFormInfo: {
+            timeDuration: indexTime + ":00 - " + (indexTime + 1) + ":00",
+            peopleCountTime: lenParticipantTime,
+            participantTime: participantTime
+          }
+        })
+        // console.log("analysisFormInfo after gen:", this.data.analysisFormInfo)
       }
-    }
-
-    // console.log("participantTime:",participantTime)
-    // console.log("lenParticipantTime", lenParticipantTime)
-
-
-    let _timeDuration = "analysisFormInfo.timeDuration"
-    let _peopleCountTime = "analysisFormInfo.peopleCountTime"
-    let _participantTime = "analysisFormInfo.participantTime"
-
-    _this.setData({
-      [_timeDuration]: indexTime + ":00 - " + (indexTime + 1) + ":00",
-      [_peopleCountTime]: lenParticipantTime,
-      [_participantTime]: participantTime,
     })
-    // console.log("analysisFormInfo after gen:",_this.data.analysisFormInfo)
-
   },
 
   showIndex: function (e) {
@@ -140,8 +127,6 @@ Page({
   },
 
   returnIndexListener: function (e) {
-    // console.log("e.detail",e.detail)
-    // console.log("e.detail.index",e.detail.index)
     this.setData({
       index: e.detail.index
     })
@@ -155,5 +140,6 @@ Page({
     })
     this.generateFormItem()
     this.generateFormInfo()
+    this.onShow()
   }
 })

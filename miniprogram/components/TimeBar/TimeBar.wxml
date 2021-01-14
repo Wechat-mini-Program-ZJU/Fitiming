@@ -1,22 +1,6 @@
 <!--components/TimeBar/TimeBar.wxml-->
-<!-- <text>components/TimeBar/TimeBar.wxml</text> -->
 
 <block view wx:for="{{particle}}" wx:key="index" wx:for-index="index">
-  <!-- <view> 666 </view> -->
-  <!-- <view> {{item.idx}} </view> -->
-  
-  <!-- <text>{{index}}:</text>
-  <text>{{density[index]}}</text> -->
-  <!-- <text>{{formInfo[index].peopleCountTime/peopleCount}}</text> -->
-
-  <!-- <image hidden="{{density[index] == '白'? false : true}}" class="particle" bindtap="catchParticle" data-id='{{index}}' data-target="{{item}}" src="{{'../../images/RoundedRect_white_white1.svg'}}"> </image> -->
-  <!-- <image hidden="{{index != _index ? false : true}}" class="particle" bindtap="catchParticle" data-id='{{index}}' data-target="{{item}}" src='../../images/RoundedRect_{{density[index]}}_white1.svg'> </image> -->
-
   <image class="particle" bindtap="catchParticle" data-id='{{index}}' data-target="{{item}}" src='../../images/RoundedRect_{{density[index]}}_white1.svg'> </image>
-  <!-- <image class="particle" bindtap="catchParticle" data-id='{{index}}' data-target="{{item}}" src='../../images/RoundedRect_{{density[index]}}_{{pick[index]?white:skyblue}}1.svg'> </image> -->
-  
-  <!-- <image hidden="{{index == _index ? false : true}}" class="particle" bindtap="catchParticle" data-id='{{index}}' data-target="{{item}}" src='../../images/RoundedRect_{{density[index]}}_skyblue1.svg'> </image> -->
-  
-  
   
 </block>
