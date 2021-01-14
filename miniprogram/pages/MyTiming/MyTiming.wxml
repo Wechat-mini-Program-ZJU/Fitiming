@@ -2,50 +2,47 @@
 
 
 <view>
-  <cu-custom bgColor="bg-white" >
-	  <view slot="content">我的时间统计</view>
+  <cu-custom bgColor="bg-white">
+    <view slot="content">我的时间统计</view>
   </cu-custom>
 </view>
 <!-- <text>miniprogram/pages/MyTiming/MyTiming.wxml</text> -->
 <view style="padding-bottom: 40rpx"></view>
 
-<view wx:for="{{form}}" wx:key="index" wx:for-index="index">
-  <TimeFormCard bindtap="handleCard" data-target="{{item}}" form="{{item}}"></TimeFormCard>
-  <TimeFormQuest wx:if="{{item.quest}}" form="{{formItem}}"></TimeFormQuest>
+<view class="container">
+  <view wx:if='{{refresh_control}}' wx:for="{{form}}" wx:key="index" wx:for-index="index">
+    <TimeFormCard bindtap="handleCard" data-id='{{index}}' data-target="{{item}}" form="{{item}}"></TimeFormCard>
+
+  </view>
 </view>
 
-<view class="cu-bar bg-white margin-top">
-  <view class="action">
-    <text class="cuIcon-title text-orange"></text> 底部窗口
-  </view>
-  <view class="action">
-    <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="bottomModal">Bottom</button>
-  </view>
-</view>
-<view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}">
+<!-- <button class="cu-btn bg-blue shadow-blur round" bindtap="submit_create">重刷新测试</button> -->
+
+
+<view wx:if="{{showQuestFlag}}" class="cu-modal bottom-modal show">
+  <!-- 这里class里必须设置show 原本用它控制底部窗口显示 -->
   <view class="cu-dialog">
     <view>
-      <view class="action text-blue option" hidden="{{formItem.status == '已发布' ? false : true}}" bindtap="stopForm" data-form="{{formItem}}">停止统计</view>
-      <view class="action text-blue option" hidden="{{formItem.status == '未发布' ? false : true}}" bindtap="postForm" data-form="{{formItem}}">发布统计</view>
-      <view class="action text-blue option" hidden="{{formItem.status == '已停止' ? false : true}}" bindtap="startForm" data-form="{{formItem}}">开始统计</view>
+      <view class="action text-blue option" hidden="{{formItem.status == '已发布' ? false : true}}" bindtap="stopForm" data-form="{{formItem}}">
+        停止统计</view>
+      <view class="action text-blue option" hidden="{{formItem.status == '未发布' ? false : true}}" bindtap="postForm">
+        发布统计</view>
+      <view class="action text-blue option" hidden="{{formItem.status == '已停止' ? false : true}}"
+        bindtap="startForm" data-form="{{formItem}}">开始统计</view>
     </view>
     <view class="cross-line"></view>
     <view class="action text-blue option" bindtap="analyseForm" data-form="{{formItem}}">统计分析</view>
     <view class="cross-line"></view>
     <view class="action text-blue option" bindtap="editForm" data-form="{{formItem}}">编辑</view>
     <view class="cross-line"></view>
-    <view class="action text-blue option" bindtap="shareForm">分享</view>
+    <view class="action text-blue option" bindtap="shareForm" data-form="{{formItem}}">分享</view>
     <view class="cross-line"></view>
-    <view class="action text-blue option" bindtap="previewForm">预览</view>
+    <view class="action text-blue option" bindtap="previewForm" data-form="{{formItem}}">预览</view>
     <view class="cross-line"></view>
     <view class="action text-blue option" bindtap="deleteForm" data-form="{{formItem}}">删除</view>
     <view class="cross-line"></view>
-    <view class="action text-blue option" bindtap="hideModal">取消</view>
-    
-    
+    <view class="action text-blue option" bindtap="hideModal" data-form="{{formItem}}">取消</view>
+
+
   </view>
 </view>
-
-
-
-
