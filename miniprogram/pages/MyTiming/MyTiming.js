@@ -7,58 +7,6 @@ const {
 var app = getApp()
 
 Page({
-<<<<<<< Updated upstream
-  handleCard: function (e) {
-    // console.log("formList", formList)
-    console.log("e.currentTarget.dataset.target", e.currentTarget.dataset.target)
-    //console.log("form before:",form)
-    this.setData({
-
-      // form.quest : !form.quest
-      formItem: e.currentTarget.dataset.target
-      //formList.formlist.quest: !formList.formlist.quest//
-    })
-    //console.log("formItem after:",formItem)
-  },
-  showModal(e) {
-    this.setData({
-      modalName: e.currentTarget.dataset.target
-    })
-  },
-  hideModal(e) {
-    this.setData({
-      modalName: null
-    })
-  },
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    form: {
-      formName: null,
-      formStatus: null,
-      peopleCount: null,
-      quest: null,
-    },
-
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    this.setData({
-      form: formList.formlist
-    })
-    console.log(formList)
-    console.log(this.data.form)
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-=======
   /**
    * 页面的初始数据
    */
@@ -144,28 +92,14 @@ Page({
 
   },
 
->>>>>>> Stashed changes
   onReady: function () {
 
   },
 
-<<<<<<< Updated upstream
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    this.tabBar()
-  },
-=======
->>>>>>> Stashed changes
   tabBar() {
     if (typeof this.getTabBar === 'function' && this.getTabBar()) {
       this.getTabBar().setData({
         selected: 0
-<<<<<<< Updated upstream
-      })
-    }
-=======
       })
     }
   },
@@ -197,7 +131,6 @@ Page({
         }
       })
     }, 50)
->>>>>>> Stashed changes
   },
 
   /**
@@ -205,14 +138,6 @@ Page({
    */
   onHide: function () {
 
-<<<<<<< Updated upstream
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-=======
     this.setData({
       // modalName: null,
       showQuestFlag: 0
@@ -224,25 +149,10 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
->>>>>>> Stashed changes
 
   },
 
   /**
-<<<<<<< Updated upstream
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-=======
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
->>>>>>> Stashed changes
-
-  },
-
-  /**
-<<<<<<< Updated upstream
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
@@ -250,11 +160,6 @@ Page({
   },
 
   /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-=======
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
@@ -291,6 +196,5 @@ Page({
     wx.navigateTo({
       url: "../EditForm/EditForm?form=" + JSON.stringify(e.target.dataset.form)
     })
->>>>>>> Stashed changes
   }
 })

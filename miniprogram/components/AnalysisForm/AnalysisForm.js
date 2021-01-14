@@ -11,9 +11,6 @@ Component({
    * 组件的初始数据
    */
   data: {
-<<<<<<< Updated upstream
-
-=======
     users: []
   },
 
@@ -22,7 +19,6 @@ Component({
       users: Users.users
     })
     console.log(this.data.users)
->>>>>>> Stashed changes
   },
 
   /**
@@ -30,8 +26,6 @@ Component({
    */
   methods: {
 
-<<<<<<< Updated upstream
-=======
   },
   lifetimes: {
     attached: function (e) {
@@ -46,6 +40,5 @@ Component({
       })
       console.log("this.data.users", this.data.users)
     }
->>>>>>> Stashed changes
   }
 })

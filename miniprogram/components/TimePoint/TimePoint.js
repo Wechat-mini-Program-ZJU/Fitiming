@@ -19,9 +19,6 @@ Component({
    */
   methods: {
 
-<<<<<<< Updated upstream
-  }
-=======
   },
 
   lifetimes:{
@@ -42,5 +39,4 @@ Component({
       // console.log(this.data.point)
     }
   },
->>>>>>> Stashed changes
 })
