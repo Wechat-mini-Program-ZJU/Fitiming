@@ -22,7 +22,8 @@
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow">
       <navigator class="content" url="../user/user" hover-class="none">
-        <image src="../../images/个人中心.svg" class="png" mode="aspectFit"></image>
+        <!-- <image src="../../images/个人中心.svg" class="png" mode="aspectFit"></image> -->
+        <text class="cuIcon-peoplefill text-black"></text>
         <text class="text-grey">个人中心</text>
       </navigator>
     </view>
