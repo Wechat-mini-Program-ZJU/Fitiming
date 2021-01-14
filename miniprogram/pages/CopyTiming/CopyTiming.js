@@ -1,6 +1,6 @@
 const util = require("../../utils/util");
 var formList = require("../../data/formList.js")
-
+var app = getApp()
 // miniprogram/pages/CopyTiming/CopyTiming.js
 Page({
 
@@ -25,15 +25,17 @@ Page({
     wx.switchTab({
       url: '../MyTiming/MyTiming',
     })
-    formList.NewTimeForm({
-      formId: this.data.date+' '+this.data.formName,
-      formName: this.data.formName,
-      formStatus: "未发布",
-      peopleCount: 0,
-      quest: false,
-      date: this.data.date,
-      notes: this.data.formNotes,
-      
+    const db = wx.cloud.database()
+    db.collection('form').add({
+      data: {
+        name: this.data.formName,
+        status: "未发布",
+        peopleCount: 0,
+        owner: app.globalData.userInfo.nickName,
+        date: this.data.date,
+        note: this.data.formNotes,
+        result: []
+      }
     })
     console.log("NewTimeForm is run in CopyTiming.js")
     console.log(formList.formlist)
@@ -45,66 +47,15 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-    var tmp = new Date();
+    var tmp = new Date()
+    var form = JSON.parse(options.form)
     this.setData({
-      formName: options.formName,
-      formNotes: options.notes,
-      today: options.date,
-      date: options.date
+      formName: form.name,
+      formNotes: form.note,
+      today: tmp.getFullYear() + "-" + (tmp.getMonth() + 1 < 10 ? "0" : "") + (tmp.getMonth() + 1) + "-" + tmp.getDate(),
+        date: tmp.getFullYear() + "-" + (tmp.getMonth() + 1 < 10 ? "0" : "") + (tmp.getMonth() + 1) + "-" + tmp.getDate(),
     })
     // console.log(this.data.date)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-      
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

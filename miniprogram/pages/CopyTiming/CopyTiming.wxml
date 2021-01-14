@@ -14,14 +14,15 @@
         </view>
         <view class="cu-form-group align-start">
             <view class="title">备注</view>
-            <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput" placeholder="统计详情说明" model:value="{{formNotes}}"></textarea>
+            <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput" placeholder="统计详情说明"
+                model:value="{{formNotes}}"></textarea>
         </view>
         <view class="cu-form-group align-start">
-        <view class="title">统计日期</view>
-        <picker mode="date" start="{{today}}" bindchange="bindDateChange">
-            <view class="show-picker">{{date}}</view>
-        </picker>
-    </view>
+            <view class="title">统计日期</view>
+            <picker mode="date" start="{{today}}" bindchange="bindDateChange">
+                <view class="show-picker">{{date}}</view>
+            </picker>
+        </view>
     </form>
 
 

@@ -7,9 +7,6 @@ const {
 var app = getApp()
 
 Page({
-  /**
- * 页面的初始数据
- */
   data: {
     form: [],
     deletedForm: [],
@@ -19,8 +16,6 @@ Page({
     index: null,
     formItem: [],
     refresh_control: true
-
-
   },
   showQuest: function (e) {
     // console.log("showQuestFlag", this.showQuestFlag)
@@ -41,35 +36,39 @@ Page({
     this.showQuest()
     console.log("formItem after:", this.data.formItem)
   },
-  // showModal(e) {
-  //   this.setData({
-  //     modalName: e.currentTarget.dataset.target
-  //   })
-  // },
-  stopForm: function (e) {
-    // console.log(this.data.form)
-    // console.log(this.data.index)
-    let index = this.data.index
-    formList.formlist[index].formStatus = "已停止"
-    this.onShow()
-    this.hideModal()
-
-  },
   postForm: function (e) {
     let index = this.data.index
     formList.formlist[index].formStatus = "已发布"
     this.onShow()
     this.hideModal()
-
   },
   startForm: function (e) {
-    let index = this.data.index
-    formList.formlist[index].formStatus = "已发布"
+    const db = wx.cloud.database()
+    db.collection('form').where({
+      name: e.target.dataset.form.name,
+      owner: e.target.dataset.form.owner
+    }).update({
+      data: {
+        status: "已发布"
+      }
+    })
     this.onShow()
     this.hideModal()
   },
 
-
+  stopForm: function (e) {
+    const db = wx.cloud.database()
+    db.collection('form').where({
+      name: e.target.dataset.form.name,
+      owner: e.target.dataset.form.owner
+    }).update({
+      data: {
+        status: "已停止"
+      }
+    })
+    this.onShow()
+    this.hideModal()
+  },
 
   hideModal(e) {
     this.setData({
@@ -79,17 +78,17 @@ Page({
   },
   editForm: function (e) {
     wx.navigateTo({
-      url: `../EditTiming/EditTiming?formId=${this.data.formItem.formId}&formName=${this.data.formItem.formName}&date=${this.data.formItem.date}&notes=${this.data.formItem.notes}`,
+      url: "../EditTiming/EditTiming?form=" + JSON.stringify(e.target.dataset.form),
     })
   },
   copyForm: function (e) {
     wx.navigateTo({
-      url: `../CopyTiming/CopyTiming?formId=${this.data.formItem.formId}&formName=${this.data.formItem.formName}&date=${this.data.formItem.date}&notes=${this.data.formItem.notes}`,
+      url: "../CopyTiming/CopyTiming?form=" + JSON.stringify(e.target.dataset.form),
     })
   },
   analyseForm: function (e) {
     wx.navigateTo({
-      url: `../Analysis/Analysis?formId=${this.data.formItem.formId}&formName=${this.data.formItem.formName}`,
+      url: "../Analysis/Analysis?form=" + JSON.stringify(e.target.dataset.form),
     })
   },
   shareForm: function (e) {
@@ -99,6 +98,16 @@ Page({
     wx.navigateTo({
       url: `../Preview/Preview?formId=${this.data.formItem.formId}&formName=${this.data.formItem.formName}&date=${this.data.formItem.date}&notes=${this.data.formItem.notes}`,
     })
+  },
+
+  deleteForm: function (e) {
+    const db = wx.cloud.database()
+    db.collection('form').where({
+      name: e.target.dataset.form.name,
+      owner: e.target.dataset.form.owner
+    }).remove()
+    this.onShow()
+    this.hideModal()
   },
 
   onShow: function () {
@@ -125,16 +134,10 @@ Page({
             form: res.data
           })
         }
-      }), 50)
+      })
+    }, 50)
   },
-  onShow: function () {
-    this.tabBar()
-    this.setData({
-      form: formList.formlist
-    })
-    // console.log(this.data.form)
-    console.log("MyTiming is onShow")
-  },
+
   tabBar() {
     if (typeof this.getTabBar === 'function' && this.getTabBar()) {
       this.getTabBar().setData({
@@ -155,7 +158,6 @@ Page({
     // console.log("MyTiming is onHide")
   },
 
-
   onShareAppMessage: function (res) {
     let title = '邀请你填写时间统计：' + this.data.formItem.formName
     return {
@@ -169,11 +171,7 @@ Page({
       fail: function (res) {
         console.log(res + '分享失败');
       },
-      complete: function (res) {
-
-      }
-
-
+      complete: function (res) {}
     }
   }
 })

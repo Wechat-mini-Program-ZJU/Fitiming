@@ -1,55 +1,62 @@
 <!--miniprogram/pages/More/More.wxml-->
 <view>
-  <cu-custom bgColor="bg-white" >
-	  <view slot="content">更多</view>
+  <cu-custom bgColor="bg-white">
+    <view slot="content">更多</view>
   </cu-custom>
 </view>
 
 <!-- <text>miniprogram/pages/More/More.wxml</text> -->
 <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击获取头像昵称 </button>
-    <block wx:else>
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击获取头像昵称 </button>
+  <block wx:else>
     <view class="userinfo-header">
-        <image class="userinfo-header-bg" src="{{userInfo.avatarUrl}}"></image>
-        <view class="userinfo-colorfor">
-          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" ></image>
-          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        </view>
+      <image class="userinfo-header-bg" src="{{userInfo.avatarUrl}}"></image>
+      <view class="userinfo-colorfor">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
       </view>
-    </block>
+    </view>
+  </block>
 </view>
 
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
-    <view class="cu-item arrow">
-      <navigator class="content" url="../user/user" hover-class="none">
-        <!-- <image src="../../images/个人中心.svg" class="png" mode="aspectFit"></image> -->
-        <text class="cuIcon-peoplefill text-black"></text>
-        <text class="text-grey">个人中心</text>
-      </navigator>
-    </view>
-    <view class="cu-item arrow">
-      <navigator class="content" url="../VersionRecords/VersionRecords" hover-class="none">
-        <text class="cuIcon-formfill text-green"></text>
-        <text class="text-grey">开发日志</text>
-      </navigator>
-    </view>
-    <view class="cu-item arrow">
-      <view class="content" bindtap="showQrcode">
-        <text class="cuIcon-appreciatefill text-red"></text>
-        <text class="text-grey">赞赏支持</text>
-      </view>
-    </view>
-    <view class="cu-item arrow">
-      <button class="cu-btn content" open-type="feedback">
-        <text class="cuIcon-writefill text-cyan"></text>
-        <text class="text-grey">意见反馈</text>
-      </button>
-    </view>
-    <view class="cu-item arrow">
-      <navigator class="content" url="/pages/about/test/list" hover-class="none">
-        <text class="cuIcon-creativefill text-orange"></text>
-        <text class="text-grey">使用帮助</text>
-      </navigator>
+  <view class="cu-item arrow">
+    <view class="content" bindtap="showUserInfo">
+      <!-- <image src="../../images/个人中心.svg" class="png" mode="aspectFit"></image> -->
+      <text class="cuIcon-peoplefill"></text>
+      <text class="text-grey">个人中心</text>
     </view>
   </view>
-  <view class="cu-tabbar-height"></view>
+  <view class="cu-item arrow">
+    <view class="content" bindtap="showMyGroup">
+      <!-- <image src="../../images/个人中心.svg" class="png" mode="aspectFit"></image> -->
+      <text class="cuIcon-messagefill text-pink"></text>
+      <text class="text-grey">我的群组</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="../VersionRecords/VersionRecords" hover-class="none">
+      <text class="cuIcon-formfill text-green"></text>
+      <text class="text-grey">日志</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content" bindtap="showQrcode">
+      <text class="cuIcon-appreciatefill text-red"></text>
+      <text class="text-grey">赞赏支持</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <button class="cu-btn content" open-type="feedback" style="font-weight: normal;">
+      <text class="cuIcon-writefill text-cyan"></text>
+      <text class="text-grey">意见反馈</text>
+    </button>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/about/test/list" hover-class="none">
+      <text class="cuIcon-creativefill text-orange"></text>
+      <text class="text-grey">使用帮助</text>
+    </navigator>
+  </view>
+</view>
+<view class="cu-tabbar-height"></view>
