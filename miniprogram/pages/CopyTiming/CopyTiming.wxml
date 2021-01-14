@@ -1,7 +1,7 @@
 <!--miniprogram/pages/CopyTiming/CopyTiming.wxml-->
 <cu-custom bgColor="bg-white " isBack="{{true}}">
   <view slot="backText"></view>
-  <view slot="content">编辑时间统计</view>
+  <view slot="content">拷贝时间统计</view>
 </cu-custom>
 
 <!-- <InputBox prompt="统计名称" placeholder="请在此输入统计名称" model:value="{{formName}}"></InputBox>
