@@ -19,5 +19,28 @@ Component({
    */
   methods: {
 
+<<<<<<< Updated upstream
   }
+=======
+  },
+
+  lifetimes:{
+    // created: function(e){
+    //   console.log("TimeBar is created.")
+    attached: function(e){
+      // console.log("TimePoint is attached.")
+      var i,temp=[];
+      for( i=0; i<=24; i++){
+        temp.push({
+          idx: i,
+          density: 0
+        })
+      }
+      this.setData({
+        point: temp
+      })
+      // console.log(this.data.point)
+    }
+  },
+>>>>>>> Stashed changes
 })

@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 const util = require("../../utils/util")
 
 // miniprogram/pages/NewTiming/NewTiming.js
+=======
+const util = require("../../utils/util");
+var formList = require("../../data/formList.js")
+var app = getApp()
+>>>>>>> Stashed changes
 Page({
 
   /**
@@ -17,7 +23,31 @@ Page({
     })
   },
 
+<<<<<<< Updated upstream
   submit: function (e) {
+=======
+  submit_create: function (e) {
+    const db = wx.cloud.database()
+    db.collection('form').add({
+      data: {
+        name: this.data.formName,
+        status: "已发布",
+        peopleCount: 0,
+        result: [],
+        owner: app.globalData.userInfo.nickName,
+        date: this.data.date,
+        note: this.data.formNotes,
+      }
+    })
+    const _ = db.command
+    db.collection('user').where({
+      username: app.globalData.userInfo.nickName
+    }).update({
+      data: {
+        form: _.push(this.data.formName)
+      }
+    })
+>>>>>>> Stashed changes
     wx.switchTab({
       url: '../MyTiming/MyTiming',
     })
@@ -35,9 +65,13 @@ Page({
   onLoad: function (options) {
     var tmp = new Date();
     this.setData({
-      today: tmp.getFullYear() + "-" + (tmp.getMonth() + 1) + "-" + tmp.getDate(),
-      date: tmp.getFullYear() + "-" + (tmp.getMonth() + 1) + "-" + tmp.getDate()
+      today: tmp.getFullYear() + "-" + (tmp.getMonth() + 1 < 10 ? "0" : "") + (tmp.getMonth() + 1) + "-" + tmp.getDate(),
+      date: tmp.getFullYear() + "-" + (tmp.getMonth() + 1 < 10 ? "0" : "") + (tmp.getMonth() + 1) + "-" + tmp.getDate()
     })
+<<<<<<< Updated upstream
+=======
+    // console.log(this.data.date)
+>>>>>>> Stashed changes
   },
 
   /**
@@ -51,7 +85,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-      
+
   },
 
   /**

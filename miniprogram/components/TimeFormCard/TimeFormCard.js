@@ -9,7 +9,6 @@ Component({
             type: Object,
             value: {}
         },
-        
     },
 
     /**

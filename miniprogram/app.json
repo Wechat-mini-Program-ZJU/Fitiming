@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "pages": [
     
     "pages/MyTiming/MyTiming",
@@ -35,4 +36,43 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
+=======
+    "pages": [
+        "pages/More/More",
+        "pages/MyTiming/MyTiming",
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/NewTiming/NewTiming",
+        "pages/Analysis/Analysis",
+        "pages/MyCenter/MyCenter",
+        "pages/user/user",
+        "pages/VersionRecords/VersionRecords",
+        "pages/EditForm/EditForm"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Fitiming",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
+    },
+    "tabBar": {
+        "custom": true,
+        "list": [
+            {
+                "pagePath": "pages/MyTiming/MyTiming",
+                "text": "My Timing"
+            },
+            {
+                "pagePath": "pages/More/More",
+                "text": "More"
+            }
+        ]
+    },
+    "usingComponents": {
+        "cu-custom": "/colorui/components/cu-custom"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+>>>>>>> Stashed changes
 }

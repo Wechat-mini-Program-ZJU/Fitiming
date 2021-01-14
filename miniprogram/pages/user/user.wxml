@@ -1,0 +1,26 @@
+<!--miniprogram/pages/user/user.wxml-->
+<cu-custom bgColor="bg-white " isBack="{{true}}">
+  <view slot="backText"></view>
+  <view slot="content">个人中心</view>
+</cu-custom>
+
+<view class="cu-list menu">
+    <view class="cu-item arrow">
+      <view class="content show">
+        <text>头像</text>
+        <image src="{{avatarurl}}" class="png" mode="aspectFit"></image>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content show">
+        <text>昵称</text>
+        <text class="text-grey">{{nickname}}</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content show">
+        <text>我的统计</text>
+        <text class="text-grey">详情</text>
+      </view>
+    </view>
+</view>
