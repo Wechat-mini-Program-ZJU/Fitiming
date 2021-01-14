@@ -37,6 +37,14 @@ Page({
         result: []
       }
     })
+    var _ = db.command
+    db.collection('user').where({
+      username: app.globalData.userInfo.nickName
+    }).update({
+      data: {
+        form: _.push(this.data.formName)
+      }
+    })
     console.log("NewTimeForm is run in CopyTiming.js")
     console.log(formList.formlist)
   },
