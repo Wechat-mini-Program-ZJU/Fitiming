@@ -119,8 +119,8 @@ Page({
     },
     showQrcode:function(){
       wx.previewImage({
-        urls: ['https://image.weilanwl.com/color2.0/zanCode.jpg'],
-        current: 'https://image.weilanwl.com/color2.0/zanCode.jpg' // 当前显示图片的http链接      
+        urls: ['http://wychandsome12138.xyz:81/QRcode.png'],
+        current: 'http://wychandsome12138.xyz:81/QRcode.png' // 当前显示图片的http链接      
       })
     },
 })

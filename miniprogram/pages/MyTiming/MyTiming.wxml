@@ -31,7 +31,7 @@
     <view class="cross-line"></view>
     <view class="action text-blue option" bindtap="editForm">编辑</view>
     <view class="cross-line"></view>
-    <view class="action text-blue option" bindtap="shareForm">分享</view>
+    <button class="action text-blue option button-share" bindtap="shareForm" open-type="share">分享</button>
     <view class="cross-line"></view>
     <view class="action text-blue option" bindtap="previewForm">预览</view>
     <view class="cross-line"></view>
