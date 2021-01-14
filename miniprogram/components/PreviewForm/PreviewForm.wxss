@@ -6,11 +6,15 @@
   border-radius: 10px;
   height: 60vh;
   width: 65vw;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* align-content: center; */
 }
 .title{
   text-align: center;
   width:100%; 
-  height:27px;
+  /* height:rpx; */
   font-size: medium;
   padding:10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -18,29 +22,27 @@
 .title-slot{
   text-align: center;
   width:100%; 
-  height:27px;
+  /* height:27px; */
   font-size: medium;
   padding:10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.asrow{
-  /* justify-content: space-between;
-  width: min-content; */
+/*  */
+
+.cutoff-line {
+  background: #DDD;
+  /* justify-content: center; */
+  text-align: center;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-top: 31rpx;
-  justify-content: center;
+  /* justify-content: center; */
+  width: 80%;
+  height: 3rpx;
+  align-self: center;
+  /* margin-left: 20rpx; */
 }
-.ascolumn{
-  display: flex;
-  flex-direction: column;
-  margin:10rpx;
-}
-.mid{
-  display: flex;
-  justify-content: center;
-}
-.margin{
-  margin:10rpx;
+
+.notes{
+  padding: 20rpx;
+  font-size: small;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

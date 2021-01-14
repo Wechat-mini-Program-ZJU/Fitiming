@@ -15,8 +15,13 @@
     
   </scroll-view>
   
-    <PreviewForm formName="{{formItem.formName}}" analysisFormInfo="{{analysisFormInfo}}" formInfo="{{formInfo}}" _index="{{index}}"></PreviewForm>
-
-
+    <view class="right-part">
+      <PreviewForm formName="{{formItem.formName}}" date="{{formItem.date}}" notes="{{formItem.notes}}"></PreviewForm>
+      <view class="submit-button">
+        <button class="cu-btn bg-blue shadow-blur round" bindtap="submit_create">提交</button>
+      </view>
+      
+    </view>
+    
 </view>
 

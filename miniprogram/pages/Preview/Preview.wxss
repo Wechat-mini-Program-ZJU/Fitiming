@@ -27,3 +27,13 @@ page{
   justify-content: space-around;
   /* padding-bottom: 1rpx; */
 }
+.right-part{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  
+}
+
+.submit-button{
+  padding: 50rpx;
+}

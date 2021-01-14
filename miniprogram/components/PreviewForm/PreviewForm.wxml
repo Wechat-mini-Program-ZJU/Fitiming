@@ -1,20 +1,9 @@
 <!--components/PreviewForm/PreviewForm.wxml-->
 <view class="PreviewForm">
   <view class="title-slot" style="text-align:center">{{formName}}</view>
-  <view class="title">时间段：{{analysisFormInfo.timeDuration == null ? "未选中":analysisFormInfo.timeDuration}}</view>
-  <!-- <view class="title">时间段：{{formInfo[_index].timeDuration}}</view> -->
-  <view  class="asrow">
-    <view wx:for="{{analysisFormInfo.peopleCountTime}}" class="ascolumn">
-    <!-- <view wx:for="{{formInfo[_index].peopleCountTime}}" class="ascolumn"> -->
-      <view class="cu-avatar round lg margin"  wx:key style="background-image:url({{analysisFormInfo.participantTime[index].avatarUrl}});">
-        <view class="cu-tag badge {{analysisFormInfo.participantTime[index].gender%2==0?'cuIcon-female bg-pink':'cuIcon-male bg-blue'}}"></view>
-      </view>
-      <!-- <view class="cu-avatar round lg margin"  wx:key style="background-image:url({{user[formInfo[_index].participantTime[index]].userInfo.avatarUrl}});">
-        <view class="cu-tag badge {{user[formInfo[_index].participantTime[index]].userInfo.gender%2==0?'cuIcon-female bg-pink':'cuIcon-male bg-blue'}}"></view>
-      </view> -->
-      <text class="mid">{{analysisFormInfo.participantTime[index].nickName}}</text>
-      <!-- <text class="mid">{{user[formInfo[_index].participantTime[index]].nickName}}</text> -->
-    </view>
-  </view>
-   <!-- <Person item="{{persons}}"/> -->
+  <view class="title">统计日期：{{date}}</view>
+
+  <text class="cutoff-line"></text>
+  <view class="title">备注</view>
+  <view class="notes">{{notes}}</view>
 </view>

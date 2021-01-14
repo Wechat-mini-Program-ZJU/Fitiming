@@ -9,6 +9,8 @@ Component({
    */
   properties: {
     formName: String,
+    date: String,
+    notes: String,
     analysisFormInfo: Object,
     peopleCount: Number,
     formInfo: Array,
