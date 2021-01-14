@@ -18,8 +18,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-<<<<<<< Updated upstream
-=======
     catchParticle: function(e){
       this.setData({
         index: e.currentTarget.dataset.id,
@@ -84,7 +82,4 @@ Component({
       // console.log("density after ready:",this.data.density)
     }
   },
->>>>>>> Stashed changes
-
-  }
 })

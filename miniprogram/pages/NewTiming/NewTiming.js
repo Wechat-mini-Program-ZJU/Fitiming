@@ -1,12 +1,6 @@
-<<<<<<< Updated upstream
-const util = require("../../utils/util")
-
-// miniprogram/pages/NewTiming/NewTiming.js
-=======
 const util = require("../../utils/util");
 var formList = require("../../data/formList.js")
 var app = getApp()
->>>>>>> Stashed changes
 Page({
 
   /**
@@ -23,9 +17,6 @@ Page({
     })
   },
 
-<<<<<<< Updated upstream
-  submit: function (e) {
-=======
   submit_create: function (e) {
     const db = wx.cloud.database()
     db.collection('form').add({
@@ -47,7 +38,6 @@ Page({
         form: _.push(this.data.formName)
       }
     })
->>>>>>> Stashed changes
     wx.switchTab({
       url: '../MyTiming/MyTiming',
     })
@@ -68,10 +58,7 @@ Page({
       today: tmp.getFullYear() + "-" + (tmp.getMonth() + 1 < 10 ? "0" : "") + (tmp.getMonth() + 1) + "-" + tmp.getDate(),
       date: tmp.getFullYear() + "-" + (tmp.getMonth() + 1 < 10 ? "0" : "") + (tmp.getMonth() + 1) + "-" + tmp.getDate()
     })
-<<<<<<< Updated upstream
-=======
     // console.log(this.data.date)
->>>>>>> Stashed changes
   },
 
   /**

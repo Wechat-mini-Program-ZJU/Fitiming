@@ -1,7 +1,4 @@
 <!--miniprogram/pages/Analysis.wxml-->
-<<<<<<< Updated upstream
-<text>miniprogram/pages/Analysis.wxml</text>
-=======
 <cu-custom bgColor="bg-white " isBack="{{true}}">
   <view slot="backText"></view>
   <view slot="content">统计分析</view>
@@ -26,4 +23,3 @@
   <!-- <text bindtap="showIndex">调试用</text> -->
 
 </view>
->>>>>>> Stashed changes

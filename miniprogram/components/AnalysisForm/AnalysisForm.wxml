@@ -1,7 +1,4 @@
 <!--components/AnalysisForm/AnalysisForm.wxml-->
-<<<<<<< Updated upstream
-<text>components/AnalysisForm/AnalysisForm.wxml</text>
-=======
 <view class="AnalysisForm">
   <view class="title-slot" style="text-align:center">{{formName}}</view>
   <view class="title">时间段：{{analysisFormInfo.timeDuration == null ? "未选中":analysisFormInfo.timeDuration}}</view>
@@ -24,4 +21,3 @@
   </view>
   <!-- <Person item="{{persons}}"/> -->
 </view>
->>>>>>> Stashed changes

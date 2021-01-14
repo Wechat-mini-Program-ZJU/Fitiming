@@ -24,12 +24,6 @@
 </view>
 <view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}">
   <view class="cu-dialog">
-<<<<<<< Updated upstream
-    
-      <!-- <view class="action text-green">确定</view> -->
-      <view class="action text-green"></view>
-      <view class="action text-blue" bindtap="hideModal">取消</view>
-=======
     <view>
       <view class="action text-blue option" hidden="{{formItem.status == '已发布' ? false : true}}" bindtap="stopForm" data-form="{{formItem}}">停止统计</view>
       <view class="action text-blue option" hidden="{{formItem.status == '未发布' ? false : true}}" bindtap="postForm" data-form="{{formItem}}">发布统计</view>
@@ -47,7 +41,6 @@
     <view class="action text-blue option" bindtap="deleteForm" data-form="{{formItem}}">删除</view>
     <view class="cross-line"></view>
     <view class="action text-blue option" bindtap="hideModal">取消</view>
->>>>>>> Stashed changes
     
     
   </view>
