@@ -108,25 +108,11 @@ Page({
    */
   onPullDownRefresh: function () {
 
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-  showQrcode: function () {
-    wx.previewImage({
-      urls: ['https://image.weilanwl.com/color2.0/zanCode.jpg'],
-      current: 'https://image.weilanwl.com/color2.0/zanCode.jpg' // 当前显示图片的http链接      
-    })
-  },
+    },
+    showQrcode:function(){
+      wx.previewImage({
+        urls: ['http://wychandsome12138.xyz:81/QRcode.png'],
+        current: 'http://wychandsome12138.xyz:81/QRcode.png' // 当前显示图片的http链接      
+      })
+    },
 })
