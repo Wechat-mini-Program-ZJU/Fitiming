@@ -11,7 +11,10 @@
 
   <!-- <image hidden="{{density[index] == '白'? false : true}}" class="particle" bindtap="catchParticle" data-id='{{index}}' data-target="{{item}}" src="{{'../../images/RoundedRect_white_white1.svg'}}"> </image> -->
   <!-- <image hidden="{{index != _index ? false : true}}" class="particle" bindtap="catchParticle" data-id='{{index}}' data-target="{{item}}" src='../../images/RoundedRect_{{density[index]}}_white1.svg'> </image> -->
+
   <image class="particle" bindtap="catchParticle" data-id='{{index}}' data-target="{{item}}" src='../../images/RoundedRect_{{density[index]}}_white1.svg'> </image>
+  <!-- <image class="particle" bindtap="catchParticle" data-id='{{index}}' data-target="{{item}}" src='../../images/RoundedRect_{{density[index]}}_{{pick[index]?white:skyblue}}1.svg'> </image> -->
+  
   <!-- <image hidden="{{index == _index ? false : true}}" class="particle" bindtap="catchParticle" data-id='{{index}}' data-target="{{item}}" src='../../images/RoundedRect_{{density[index]}}_skyblue1.svg'> </image> -->
   
   

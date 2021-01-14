@@ -6,6 +6,7 @@ Component({
   properties: {
     formInfo: Array,
     peopleCount: Number,
+    peopleCountTime: Number,
   },
 
   /**

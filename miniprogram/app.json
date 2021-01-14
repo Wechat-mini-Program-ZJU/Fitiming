@@ -8,7 +8,8 @@
     "pages/Analysis/Analysis",
     "pages/MyCenter/MyCenter",
     "pages/user/user",
-    "pages/VersionRecords/VersionRecords"
+    "pages/VersionRecords/VersionRecords",
+    "pages/Preview/Preview"
   ],
   "window": {
     "backgroundTextStyle": "light",

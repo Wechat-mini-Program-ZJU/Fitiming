@@ -1,10 +1,10 @@
-/* components/AnalysisForm/AnalysisForm.wxss */
+/* components/PreviewForm/PreviewForm.wxss */
 @import "../../colorui/main.wxss";
 @import "../../colorui/icon.wxss";
-.AnalysisForm {
+.PreviewForm {
   background-color: white;
   border-radius: 10px;
-  height: 90vh;
+  height: 60vh;
   width: 65vw;
 }
 .title{

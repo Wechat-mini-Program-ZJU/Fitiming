@@ -54,6 +54,11 @@ Page({
         url: `../Analysis/Analysis?formId=${this.data.formItem.formId}&formName=${this.data.formItem.formName}`,
       })
     },
+    previewForm: function(e){
+      wx.navigateTo({
+        url: `../Preview/Preview?formId=${this.data.formItem.formId}&formName=${this.data.formItem.formName}&date=${this.data.formItem.date}&notes=${this.data.formItem.notes}`,
+      })
+    },
     deleteForm: function(e){
       console.log("index", this.data.index)
       formList.DeleteTimeForm(this.data.index,1)
