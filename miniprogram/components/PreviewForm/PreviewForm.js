@@ -8,15 +8,39 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    formName: String,
-    date: String,
-    notes: String,
+    formName: {
+      type: String,
+      observe: function (newval) {
+        console.log(">>>>>>>>>", newval)
+        this.setData({
+          formName: newval
+        })
+      }
+    },
+    date: {
+      type: String,
+      observe: function (newval) {
+        console.log(">>>>>>>>>", newval)
+        this.setData({
+          date: newval
+        })
+      }
+    },
+    notes: {
+      type: String,
+      observe: function (newval) {
+        console.log(">>>>>>>>>", newval)
+        this.setData({
+          notes: newval
+        })
+      }
+    },
     analysisFormInfo: Object,
     peopleCount: Number,
     formInfo: Array,
     _index: Number,
     // participantTime: Array,
-
+    form: Object
   },
 
   /**
@@ -49,7 +73,9 @@ Component({
       this.setData({
         users:Users.users
       })
-      console.log("this.data.users",this.data.users)
+      // console.log("this.data.users", this.data.users)
+      
+      // console.log(">>>>>>>>>>>>>", this.data)
     }
   }
 })

@@ -37,8 +37,15 @@ Page({
     console.log("formItem after:", this.data.formItem)
   },
   postForm: function (e) {
-    let index = this.data.index
-    formList.formlist[index].formStatus = "已发布"
+    const db = wx.cloud.database()
+    db.collection('form').where({
+      name: e.target.dataset.form.name,
+      owner: e.target.dataset.form.owner
+    }).update({
+      data: {
+        status: "已发布"
+      }
+    })
     this.onShow()
     this.hideModal()
   },
@@ -96,7 +103,7 @@ Page({
   },
   previewForm: function (e) {
     wx.navigateTo({
-      url: `../Preview/Preview?formId=${this.data.formItem.formId}&formName=${this.data.formItem.formName}&date=${this.data.formItem.date}&notes=${this.data.formItem.notes}`,
+      url: "../Preview/Preview?form=" + JSON.stringify(e.target.dataset.form),
     })
   },
 
