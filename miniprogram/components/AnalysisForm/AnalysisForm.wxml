@@ -4,12 +4,12 @@
   <view class="title">时间段：{{analysisFormInfo.timeDuration == null ? "未选中":analysisFormInfo.timeDuration}}</view>
   <view class="asrow">
     <view wx:for="{{analysisFormInfo.peopleCountTime}}" wx:index="index" class="ascolumn">
-      <view class="cu-avatar round lg margin" style="background-image:url({{formInfo[_index].participantTime[0].avatar}});">
+      <view class="cu-avatar round lg margin" style="background-image:url({{formInfo[_index].participantTime[index].avatar}});">
         <view
-          class="cu-tag badge {{formInfo[_index].participantTime[0].gender%2==0?'cuIcon-female bg-pink':'cuIcon-male bg-blue'}}">
+          class="cu-tag badge {{formInfo[_index].participantTime[index].gender%2==0?'cuIcon-female bg-pink':'cuIcon-male bg-blue'}}">
         </view>
       </view>
-      <text class="mid">{{formInfo[_index].participantTime[0].username}}</text>
+      <text class="mid">{{formInfo[_index].participantTime[index].username}}</text>
     </view>
   </view>
 </view>

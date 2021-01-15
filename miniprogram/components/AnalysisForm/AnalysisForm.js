@@ -22,8 +22,8 @@ Component({
       observer: function (newval, oldval) {
         if (this.data.formInfo.length == 24)
         {
-          console.log(this.data.formInfo)
-          console.log(this.data.formInfo[0].participantTime)
+          // console.log(this.data.formInfo)
+          // console.log(this.data.formInfo[0].participantTime)
           this.setData({
             formInfo: newval
           })

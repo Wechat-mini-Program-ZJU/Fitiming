@@ -99,7 +99,7 @@ Page({
     })
   },
   shareForm: function (e) {
-    this.onShareAppMessage()
+    this.onShareAppMessage(e)
   },
   previewForm: function (e) {
     wx.navigateTo({
@@ -165,11 +165,11 @@ Page({
     // console.log("MyTiming is onHide")
   },
 
-  onShareAppMessage: function (res) {
-    let title = '邀请你填写时间统计：' + this.data.formItem.formName
+  onShareAppMessage: function (e) {
+    let title = '邀请你填写时间统计：' + this.data.formItem.name
     return {
       title: title,
-      path: `../Share/Preview?formId=${this.data.formItem.formId}&formName=${this.data.formItem.formName}&date=${this.data.formItem.date}&notes=${this.data.formItem.notes}`,
+      path: "/pages/Share/Preview?form=" + JSON.stringify(e.target.dataset.form),
       imageUrl: 'http://wychandsome12138.xyz:81/Fitiming_icon.png',
       success: function (shareTickets) {
         console.info(shareTickets + '分享成功');

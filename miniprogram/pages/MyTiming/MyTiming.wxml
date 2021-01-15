@@ -37,7 +37,7 @@
     <view class="cross-line"></view>
     <view class="action text-blue option" bindtap="copyForm" data-form="{{formItem}}">拷贝</view>
     <view class="cross-line"></view>
-    <button class="action text-blue option button-share" bindtap="shareForm" open-type="share">分享</button>
+    <button class="action text-blue option button-share" bindtap="shareForm" open-type="share" data-form="{{formItem}}">分享</button>
     <view class="cross-line"></view>
     <view class="action text-blue option" bindtap="previewForm" data-form="{{formItem}}">预览</view>
     <view class="cross-line"></view>

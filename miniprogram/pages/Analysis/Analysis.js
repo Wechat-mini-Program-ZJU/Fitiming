@@ -43,7 +43,7 @@ Page({
     }).get({
       // 在数据库中查找问卷
       success: res => {
-        // console.log("res: ", res)
+        console.log("res: ", res)
         // 对问卷的所有填写结果进行统计
         res.data[0].result.forEach(e => {
           // console.log(e)

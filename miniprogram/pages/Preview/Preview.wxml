@@ -10,7 +10,7 @@
     scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
     <view class="BarandPoint">
       <TimePoint></TimePoint>
-      <TimeBar bind:returnIndex="returnIndexListener" peopleCount="{{formItem.peopleCount}}" formInfo="{{formInfo}}">
+      <TimeBar bind:returnIndex="returnIndexListener" peopleCount="{{formItem.peopleCount}}" formInfo="{{formInfo}}" bindtap="showChoice" class=".choose">
       </TimeBar>
     </view>
     
